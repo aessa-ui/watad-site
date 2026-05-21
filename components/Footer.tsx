@@ -1,11 +1,17 @@
 "use client";
 
 /**
- * Footer — structure, not content. No motion.
- * Three columns (brand / contact / legal), conditional trust
- * strip (renders only when a CR number is set), copyright line.
- * Separated from the page by the single 1px Watad Line divider.
- * On mobile the language toggle lives here, not in the header.
+ * Footer — premium redesign.
+ *
+ * Structure:
+ *   [Brand statement row]  — large wordmark + tagline + booking link
+ *   [1px divider]
+ *   [Links grid]           — contact | legal | (regions)
+ *   [Optional trust strip] — hidden until CR number is set
+ *   [Copyright bar]        — copyright + mobile language toggle
+ *
+ * No motion — footer is a static trust anchor, not an animation canvas.
+ * Mobile: stacks cleanly, lang toggle shown in copyright bar.
  */
 
 import { useLang } from "@/lib/LanguageContext";
@@ -16,22 +22,26 @@ import { Container, Wordmark } from "./ui";
 function FooterLangToggle() {
   const { lang, setLang } = useLang();
   return (
-    <div className="flex items-center gap-s1 text-caption md:hidden">
+    <div className="flex items-center gap-s2 text-caption">
       <button
         type="button"
         onClick={() => setLang("ar")}
-        className={lang === "ar" ? "text-ink" : "text-muted opacity-40"}
+        className={[
+          "transition-colors duration-150",
+          lang === "ar" ? "text-ink" : "text-muted opacity-40 hover:opacity-70",
+        ].join(" ")}
         aria-pressed={lang === "ar"}
       >
         AR
       </button>
-      <span className="text-muted opacity-40" aria-hidden="true">
-        |
-      </span>
+      <span className="text-muted opacity-30" aria-hidden="true">|</span>
       <button
         type="button"
         onClick={() => setLang("en")}
-        className={lang === "en" ? "text-ink" : "text-muted opacity-40"}
+        className={[
+          "transition-colors duration-150",
+          lang === "en" ? "text-ink" : "text-muted opacity-40 hover:opacity-70",
+        ].join(" ")}
         aria-pressed={lang === "en"}
       >
         EN
@@ -43,29 +53,53 @@ function FooterLangToggle() {
 export function Footer() {
   const { lang } = useLang();
   const f = content.footer;
+  const n = content.nav;
   const showTrustStrip = config.crNumber.trim().length > 0;
 
   return (
-    <footer className="border-t border-line bg-bone py-s7">
+    <footer className="border-t border-line bg-bone" aria-label="Footer">
       <Container>
-        <div className="grid grid-cols-1 gap-s6 md:grid-cols-3">
-          {/* Brand */}
+        {/* ── Brand statement row ──────────────────────────────── */}
+        <div className="flex flex-col gap-s5 pb-s6 pt-s7 md:flex-row md:items-end md:justify-between">
           <div>
-            <Wordmark variant="ink" className="h-7 w-auto" />
-            <p className="mt-s3 text-body-m text-ink">{f.brandDescriptor[lang]}</p>
+            <Wordmark variant="ink" className="h-8 w-auto md:h-9" />
+            <p className="mt-s3 max-w-[340px] text-body-m text-ink">
+              {f.brandDescriptor[lang]}
+            </p>
             <p className="text-body-m text-muted">{f.brandRegions[lang]}</p>
           </div>
 
+          {/* Booking CTA — subtle teal link */}
+          <a
+            href={config.calendlyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 text-body-m font-medium text-teal underline-offset-4 transition-opacity duration-150 hover:opacity-70"
+            aria-label={n.cta[lang]}
+          >
+            <span>{n.cta[lang]}</span>
+            {/* Arrow respects reading direction */}
+            <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5">
+              {lang === "ar" ? "←" : "→"}
+            </span>
+          </a>
+        </div>
+
+        {/* Thin divider */}
+        <div className="border-t border-line" aria-hidden="true" />
+
+        {/* ── Links grid ──────────────────────────────────────── */}
+        <div className="grid grid-cols-1 gap-s6 pb-s6 pt-s6 sm:grid-cols-2 md:grid-cols-3">
           {/* Contact */}
           <div>
             <p className="text-overline font-medium uppercase tracking-[0.08em] text-muted">
               {f.contactLabel[lang]}
             </p>
-            <ul className="mt-s3 space-y-s2 text-body-m">
+            <ul className="mt-s3 space-y-s2 text-body-m" role="list">
               <li>
                 <a
                   href={mailtoUrl}
-                  className="text-ink underline-offset-4 hover:underline"
+                  className="text-ink underline-offset-4 transition-colors duration-150 hover:text-teal hover:underline"
                 >
                   {config.email}
                 </a>
@@ -75,7 +109,7 @@ export function Footer() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-ink underline-offset-4 hover:underline"
+                  className="text-ink underline-offset-4 transition-colors duration-150 hover:text-teal hover:underline"
                 >
                   WhatsApp
                 </a>
@@ -91,11 +125,11 @@ export function Footer() {
             <p className="text-overline font-medium uppercase tracking-[0.08em] text-muted">
               {f.legalLabel[lang]}
             </p>
-            <ul className="mt-s3 space-y-s2 text-body-m">
+            <ul className="mt-s3 space-y-s2 text-body-m" role="list">
               <li>
                 <a
                   href="/privacy"
-                  className="text-ink underline-offset-4 hover:underline"
+                  className="text-ink underline-offset-4 transition-colors duration-150 hover:text-teal hover:underline"
                 >
                   {f.privacy[lang]}
                 </a>
@@ -103,7 +137,7 @@ export function Footer() {
               <li>
                 <a
                   href="/terms"
-                  className="text-ink underline-offset-4 hover:underline"
+                  className="text-ink underline-offset-4 transition-colors duration-150 hover:text-teal hover:underline"
                 >
                   {f.terms[lang]}
                 </a>
@@ -115,19 +149,47 @@ export function Footer() {
               )}
             </ul>
           </div>
+
+          {/* Regions + language toggle (desktop) */}
+          <div className="hidden md:block">
+            <p className="text-overline font-medium uppercase tracking-[0.08em] text-muted">
+              {lang === "ar" ? "نطاق الخدمة" : "Coverage"}
+            </p>
+            <ul className="mt-s3 space-y-s1 text-body-m text-muted" role="list">
+              {lang === "ar" ? (
+                <>
+                  <li>المملكة العربية السعودية</li>
+                  <li>منطقة الخليج العربي</li>
+                  <li>مصر</li>
+                </>
+              ) : (
+                <>
+                  <li>Saudi Arabia</li>
+                  <li>Gulf Region</li>
+                  <li>Egypt</li>
+                </>
+              )}
+            </ul>
+            <div className="mt-s4">
+              <FooterLangToggle />
+            </div>
+          </div>
         </div>
 
-        {/* Conditional trust strip — hidden entirely until CR issued */}
+        {/* Conditional trust strip */}
         {showTrustStrip && (
-          <p className="mt-s6 border-t border-line pt-s4 text-caption text-muted">
+          <p className="border-t border-line pt-s4 pb-s2 text-caption text-muted">
             {f.trustStrip[lang]}
           </p>
         )}
 
-        {/* Copyright + mobile language toggle */}
-        <div className="mt-s6 flex flex-col gap-s3 md:flex-row md:items-center md:justify-between">
+        {/* ── Copyright bar ────────────────────────────────────── */}
+        <div className="flex flex-col gap-s3 border-t border-line py-s5 md:flex-row md:items-center md:justify-between">
           <p className="text-caption text-muted">{f.copyright[lang]}</p>
-          <FooterLangToggle />
+          {/* Mobile lang toggle */}
+          <div className="md:hidden">
+            <FooterLangToggle />
+          </div>
         </div>
       </Container>
     </footer>

@@ -1,15 +1,52 @@
 "use client";
 
 /**
- * Section 2 — Trusted By / Who We Work With.
- * Text-only sector grid (no logos) — 8 sectors in a 4-col grid.
- * Softbone tone. Grid lines via gap + bg-line trick.
+ * Section 2 — Who We Work With.
+ *
+ * Logo placeholder strip (8 monochrome pill marks) — replace each
+ * with a real client <img> or <svg> logo before launch.
+ * Below: elegant sector list as flowing text pills.
+ * Softbone tone.
+ *
+ * Placeholder design: pill-shaped rectangles of varying widths at
+ * 20% opacity. Industry-standard treatment for pre-launch logo rows
+ * (used by Stripe, Linear, Vercel, etc.).
  */
 
 import { useLang } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { Container, Section, SectionHeader } from "./ui";
 import { Reveal, RevealGroup, RevealItem } from "./Reveal";
+
+// Varying widths create organic visual rhythm, as real logos would.
+// Replace each entry with a real logo element when available.
+const LOGO_SLOTS = [
+  { width: 88 },
+  { width: 70 },
+  { width: 112 },
+  { width: 80 },
+  { width: 104 },
+  { width: 74 },
+  { width: 96 },
+  { width: 118 },
+];
+
+function LogoPlaceholder({ width, index }: { width: number; index: number }) {
+  return (
+    <div
+      className="flex h-12 w-full items-center justify-center"
+      aria-label={`Client ${index + 1}`}
+      role="img"
+    >
+      {/* Monochrome pill mark — replace with real logo */}
+      <div
+        className="rounded bg-ink opacity-[0.2] transition-opacity duration-300 group-hover:opacity-[0.5]"
+        style={{ width: `${width}px`, height: "11px" }}
+        aria-hidden="true"
+      />
+    </div>
+  );
+}
 
 export function TrustedBy() {
   const { lang } = useLang();
@@ -29,14 +66,26 @@ export function TrustedBy() {
           </p>
         </Reveal>
 
-        {/* Grid lines via 1px bg-line gap between bg-softbone cells */}
-        <RevealGroup className="mt-s6 grid grid-cols-2 gap-px bg-line sm:grid-cols-3 lg:grid-cols-4">
+        {/* Logo placeholder strip */}
+        <Reveal>
+          <div className="mt-s6 border-y border-line py-s5">
+            <div className="grid grid-cols-2 gap-s2 sm:grid-cols-4 sm:gap-s3 lg:grid-cols-8">
+              {LOGO_SLOTS.map((slot, i) => (
+                <div key={i} className="group">
+                  <LogoPlaceholder width={slot.width} index={i} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Sector pills — flowing horizontal list */}
+        <RevealGroup className="mt-s5 flex flex-wrap items-center justify-center gap-x-s2 gap-y-s2">
           {t.sectors.map((sector, i) => (
-            <RevealItem
-              key={i}
-              className="flex items-center justify-center bg-softbone px-s3 py-s4 text-center text-body-m font-medium text-ink"
-            >
-              {sector[lang]}
+            <RevealItem key={i}>
+              <span className="inline-block rounded-full border border-line bg-bone px-s3 py-[6px] text-caption font-medium text-muted transition-colors duration-200 hover:border-teal/30 hover:text-ink">
+                {sector[lang]}
+              </span>
             </RevealItem>
           ))}
         </RevealGroup>

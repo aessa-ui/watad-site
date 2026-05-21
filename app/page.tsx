@@ -26,6 +26,7 @@ import { CaseStudies } from "@/components/CaseStudies";
 import { ClosingCTA } from "@/components/ClosingCTA";
 import { Footer } from "@/components/Footer";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 export default function Home() {
   const { lang } = useLang();
@@ -52,7 +53,9 @@ export default function Home() {
       </main>
 
       <Footer />
+      {/* Mobile CTAs: sticky bar (booking + whatsapp) + floating whatsapp circle */}
       <MobileStickyBar />
+      <FloatingWhatsApp />
     </>
   );
 }
