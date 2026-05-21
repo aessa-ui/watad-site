@@ -1,9 +1,22 @@
 "use client";
 
 /**
- * Section 2 — Who We Work With.
- * Honest sector/category text only — no logo placeholders,
- * no fabricated client names. Softbone tone.
+ * "Sectors We Support" band.
+ *
+ * Eight sector categories rendered as a bordered card grid.
+ * gap-px on the grid container + bg-line creates hairline
+ * separators between cells without doubled borders.
+ * Cards are bg-bone on a softbone section — subtle tonal contrast.
+ *
+ * Design principles:
+ *  — No fake brands, no logos, no placeholder imagery
+ *  — Sector/category signals only (honest)
+ *  — Centered text, generous padding, quiet typography
+ *  — No hover lift, no shadow, no gradient
+ *  — 2-column on mobile, 4-column on desktop
+ *  — Both languages always visible inside each card (bilingual
+ *    convention for GCC executive audiences — Arabic primary,
+ *    English sub-label; does not depend on the language toggle)
  */
 
 import { useLang } from "@/lib/LanguageContext";
@@ -19,29 +32,33 @@ export function TrustedBy() {
     <Section id="trusted-by" tone="softbone">
       <Container>
         <Reveal>
-          <SectionHeader
-            overline={t.overline[lang]}
-            heading={t.h2[lang]}
-            centered
-          />
-          <p className="mx-auto mt-s4 max-w-reading text-center text-body-m text-muted md:text-body">
-            {t.lead[lang]}
-          </p>
+          <SectionHeader overline={t.overline[lang]} heading={t.h2[lang]} />
         </Reveal>
 
-        {/* Sector pills — flowing horizontal list */}
-        <RevealGroup className="mt-s6 flex flex-wrap items-center justify-center gap-x-s2 gap-y-s2">
+        {/*
+         * grid gap-px bg-line — the 1px gap colour shows the line token,
+         * creating hairline separators. Each cell has bg-bone to sit
+         * against the softbone section background.
+         */}
+        <RevealGroup className="mt-s6 grid grid-cols-2 gap-px bg-line md:grid-cols-4">
           {t.sectors.map((sector, i) => (
             <RevealItem key={i}>
-              <span className="inline-block rounded-full border border-line bg-bone px-s3 py-[6px] text-caption font-medium text-ink">
-                {sector[lang]}
-              </span>
+              <div className="flex min-h-[108px] flex-col items-center justify-center bg-bone px-s3 py-s4 text-center md:min-h-[120px] md:px-s4 md:py-s5">
+                {/* Arabic — primary label */}
+                <p className="text-body-m font-semibold leading-snug text-ink">
+                  {sector.ar}
+                </p>
+                {/* English — secondary label, always shown */}
+                <p className="mt-[6px] text-caption leading-tight text-muted">
+                  {sector.en}
+                </p>
+              </div>
             </RevealItem>
           ))}
         </RevealGroup>
 
         <Reveal>
-          <p className="mt-s5 text-center text-caption text-muted">
+          <p className="mt-s5 max-w-reading text-caption text-muted">
             {t.closing[lang]}
           </p>
         </Reveal>

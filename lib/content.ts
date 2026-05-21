@@ -324,25 +324,21 @@ export const content = {
   },
 
   trustedBy: {
-    overline: { ar: "لمن نعمل", en: "WHO WE WORK WITH" } as Bi,
-    h2: { ar: "القطاعات التي نخدمها", en: "Sectors we serve" } as Bi,
-    lead: {
-      ar: "نعمل مع الشركات التي تبيع خدمات وحلولاً عالية القيمة للمؤسسات والجهات الحكومية في السعودية والخليج ومصر.",
-      en: "We work with firms selling high-value services and solutions into corporate and government buyers across Saudi Arabia, the GCC, and Egypt.",
-    } as Bi,
+    overline: { ar: "القطاعات", en: "SECTORS WE SUPPORT" } as Bi,
+    h2: { ar: "القطاعات التي ندعمها", en: "Sectors we support" } as Bi,
     sectors: [
-      { ar: "الاستشارات والخدمات المتخصصة", en: "Specialist Consulting & Services" } as Bi,
-      { ar: "التقنية وحلول المؤسسات", en: "Technology & Enterprise Solutions" } as Bi,
-      { ar: "الفعاليات والعمليات", en: "Events & Operations" } as Bi,
-      { ar: "إدارة المرافق", en: "Facility Management" } as Bi,
-      { ar: "الأمن والسلامة", en: "Security & Safety" } as Bi,
-      { ar: "الموارد البشرية والتدريب", en: "HR, Manpower & Training" } as Bi,
-      { ar: "اللوجستيات وسلاسل الإمداد", en: "Logistics & Supply Chain" } as Bi,
-      { ar: "التوريد الحكومي", en: "Government Procurement" } as Bi,
+      { ar: "البرامج الحكومية", en: "Government Programs" } as Bi,
+      { ar: "الفعاليات والأماكن", en: "Events & Venues" } as Bi,
+      { ar: "مجموعات الضيافة", en: "Hospitality Groups" } as Bi,
+      { ar: "الرياضة والترفيه", en: "Sports & Entertainment" } as Bi,
+      { ar: "شبكات التجزئة", en: "Retail Networks" } as Bi,
+      { ar: "المكاتب التنفيذية", en: "Executive Offices" } as Bi,
+      { ar: "العمليات متعددة المدن", en: "Multi-City Operations" } as Bi,
+      { ar: "الفرق التشغيلية", en: "Operational Teams" } as Bi,
     ],
     closing: {
-      ar: "القاسم المشترك: قيمة الصفقة الواحدة تستحق إيقاع متابعة احترافي ومنظم.",
-      en: "The common thread: deal sizes that warrant a disciplined commercial cadence.",
+      ar: "القاسم المشترك: عمليات تجارية معقدة تستحق بنية تشغيلية منضبطة.",
+      en: "The common thread: complex commercial operations that warrant disciplined infrastructure.",
     } as Bi,
   },
 
