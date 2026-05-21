@@ -2,8 +2,13 @@
  * Watad — all site copy. Bilingual: { ar, en } per leaf.
  *
  * SOURCE OF TRUTH: WATAD_WEBSITE_V1_FRAMER_EXECUTION.md S2.
- * Every string below is approved copy. Do not rewrite, do not
- * "localize further", do not add. No pricing. No invented claims.
+ * Approved copy. No pricing. No invented claims. No fabricated
+ * clients, logos, metrics, or case studies — Watad is pre-first-pilot.
+ *
+ * Live sections: hero, trustedBy, services, methodology (via
+ * OperationalCapabilities), whyWatad, engagements, closing.
+ * Retired keys (sectors / antiPositioning / commitment / faq /
+ * caseStudies) removed in the 2026-05-21 canon cleanup.
  */
 
 import { config } from "./config";
@@ -41,62 +46,12 @@ export const content = {
       ar: `شركة عمليات نمو إقليمية. مقرها ${config.cityAr}.`,
       en: `A regional growth operations firm. Headquartered in ${config.cityEn}.`,
     } as Bi,
+    // Operating principles, not metrics — true descriptors of the model.
     proofChips: [
       { ar: "التزام تعاقدي", en: "Contractual commitment" } as Bi,
       { ar: "حصرية القطاع", en: "Sector exclusivity" } as Bi,
       { ar: "تقرير يومي", en: "Daily reporting" } as Bi,
     ],
-  },
-
-  sectors: {
-    overline: { ar: "لمن نعمل", en: "WHO WE WORK WITH" } as Bi,
-    h2: { ar: "شركاؤنا", en: "Our partners" } as Bi,
-    lead: {
-      ar: "نعمل مع شركات تبيع خدمات وحلولاً عالية القيمة لقطاع الشركات والجهات الحكومية. شركاؤنا عادةً في القطاعات التالية:",
-      en: "We work with firms selling high-value services and solutions into corporate and government buyers. Our partners typically operate in the following sectors:",
-    } as Bi,
-    cards: [
-      { ar: "شركات الخدمات والاستشارات", en: "Services and specialist consulting" },
-      { ar: "شركات الفعاليات والعمليات", en: "Events and operations" },
-      { ar: "شركات إدارة المرافق", en: "Facility management" },
-      { ar: "شركات الأمن والسلامة", en: "Security and safety" },
-      {
-        ar: "شركات الموارد البشرية والقوى العاملة",
-        en: "HR, manpower, and corporate training",
-      },
-      { ar: "شركات اللوجستيات وسلاسل الإمداد", en: "Logistics and supply chain" },
-      {
-        ar: "شركات التقنية وحلول البرمجيات للمؤسسات",
-        en: "Technology and enterprise software",
-      },
-      { ar: "شركات التوريد الحكومي", en: "Government supplier companies" },
-    ] as Bi[],
-    closing: {
-      ar: "القاسم المشترك: قيمة الصفقة الواحدة تستحق إيقاع متابعة احترافي ومنظم.",
-      en: "The common thread: deal sizes that warrant a disciplined commercial cadence.",
-    } as Bi,
-  },
-
-  antiPositioning: {
-    overline: { ar: "الحدود", en: "WHAT WE DON'T DO" } as Bi,
-    h2: { ar: "نحن لا نقدّم", en: "Watad does not provide" } as Bi,
-    list: [
-      { ar: "خدمات وكالات تسويق", en: "Marketing agency services" },
-      { ar: "إدارة حسابات تواصل اجتماعي", en: "Social media account management" },
-      { ar: "بيع أدوات أو اشتراكات برمجية", en: "Software tools or subscriptions" },
-      {
-        ar: "استشارات استراتيجية بدون تنفيذ",
-        en: "Strategy advisory without execution",
-      },
-      {
-        ar: "خدمات بدون التزام تعاقدي",
-        en: "Engagements without contractual commitment",
-      },
-      {
-        ar: "عمل عبر قطاعات متنافسة في نفس الوقت",
-        en: "Concurrent engagements across competing firms in the same sector",
-      },
-    ] as Bi[],
   },
 
   methodology: {
@@ -144,29 +99,6 @@ export const content = {
         } as Bi,
       },
     ],
-  },
-
-  commitment: {
-    h2: {
-      ar: "التزام تعاقدي، ليس وعداً تسويقياً",
-      en: "A contractual commitment, not a marketing promise.",
-    } as Bi,
-    body1: {
-      ar: "نلتزم بعدد محدد من اللقاءات المؤهلة خلال 30 يوماً، يتم تثبيته كتابياً في الاتفاقية قبل بدء العمل. إن لم نصل للعدد المتفق عليه، رسم النجاح يُلغى ولا يُستحق.",
-      en: "We commit to a defined number of qualified meetings in 30 days, recorded in the agreement before work begins. If the number is not delivered, the success fee is waived and not owed.",
-    } as Bi,
-    body2: {
-      ar: "نعمل وفق اتفاقية صفحة واحدة، مع تعريف واضح لـ «اللقاء المؤهل» يوقّعه الطرفان قبل الانطلاق.",
-      en: 'We operate from a one-page agreement, with a definition of "qualified meeting" signed by both parties before kickoff.',
-    } as Bi,
-    anchor: {
-      ar: "اطّلع على نموذج التعاقد ↓",
-      en: "View engagement model ↓",
-    } as Bi,
-    microBand: {
-      ar: "كل عميل يصله تقرير يومي مختصر، ومراجعة أسبوعية، وتقرير ختامي في اليوم الثلاثين.",
-      en: "Every client receives a brief daily report, a weekly review, and a Day-30 close-out report.",
-    } as Bi,
   },
 
   engagements: {
@@ -233,63 +165,6 @@ export const content = {
     } as Bi,
   },
 
-  faq: {
-    overline: { ar: "أسئلة شائعة", en: "FAQ" } as Bi,
-    h2: { ar: "أسئلة شائعة", en: "Common questions" } as Bi,
-    items: [
-      {
-        q: {
-          ar: "كيف تختلفون عن وكالات التسويق؟",
-          en: "How do you differ from marketing agencies?",
-        } as Bi,
-        a: {
-          ar: "نحن لا ندير حسابات تواصل ولا حملات. نُشغّل الطبقة التشغيلية بين النية التجارية واللقاء المؤهل.",
-          en: "We do not run social channels or campaigns. We operate the commercial layer between intent and a qualified meeting.",
-        } as Bi,
-      },
-      {
-        q: {
-          ar: "هل نحتفظ بفريق المبيعات الداخلي؟",
-          en: "Do we keep our internal sales team?",
-        } as Bi,
-        a: {
-          ar: "نعم. نحن طبقة تشغيلية تكمّل فريقكم. اللقاءات تصل إليهم، الإغلاق يبقى عملهم.",
-          en: "Yes. We complement your team. Meetings land with them; the close stays theirs.",
-        } as Bi,
-      },
-      {
-        q: {
-          ar: "كم يستغرق الإعداد قبل بدء التواصل؟",
-          en: "How long is setup before outreach begins?",
-        } as Bi,
-        a: {
-          ar: "سبعة أيام. الأسبوع الأول لتعريف الشريحة والمعايير والاتفاقية.",
-          en: "Seven days. Week 1 covers ICP, criteria, and agreement signing. Outreach begins Day 8.",
-        } as Bi,
-      },
-      {
-        q: {
-          ar: "ما الذي يحدث إذا لم نصل لعدد اللقاءات؟",
-          en: "What happens if you miss the meeting commitment?",
-        } as Bi,
-        a: {
-          ar: "رسم النجاح يُلغى ولا يُستحق. الالتزام تعاقدي.",
-          en: "The success fee is waived and not owed. The commitment is contractual.",
-        } as Bi,
-      },
-      {
-        q: {
-          ar: "هل تأخذون عملاء من نفس القطاع في نفس الوقت؟",
-          en: "Do you work with competitors in the same sector at the same time?",
-        } as Bi,
-        a: {
-          ar: "لا. نلتزم بحصرية القطاع للعميل خلال فترة الالتزام.",
-          en: "No. The active client owns sector exclusivity for the duration of the engagement.",
-        } as Bi,
-      },
-    ],
-  },
-
   closing: {
     h2: { ar: "للحديث المباشر مع فريقنا", en: "Speak with our team" } as Bi,
     body: {
@@ -326,6 +201,8 @@ export const content = {
   trustedBy: {
     overline: { ar: "القطاعات", en: "SECTORS WE SUPPORT" } as Bi,
     h2: { ar: "القطاعات التي ندعمها", en: "Sectors we support" } as Bi,
+    // Operational category signals — the landscape Watad operates within.
+    // No client names, no logos. Pre-first-pilot: nothing implied as a client.
     sectors: [
       { ar: "البرامج الحكومية", en: "Government Programs" } as Bi,
       { ar: "الفعاليات والأماكن", en: "Events & Venues" } as Bi,
@@ -335,7 +212,7 @@ export const content = {
       { ar: "المكاتب التنفيذية", en: "Executive Offices" } as Bi,
       { ar: "العمليات متعددة المدن", en: "Multi-City Operations" } as Bi,
       { ar: "الفرق التشغيلية", en: "Operational Teams" } as Bi,
-    ],
+    ] as Bi[],
     closing: {
       ar: "القاسم المشترك: عمليات تجارية معقدة تستحق بنية تشغيلية منضبطة.",
       en: "The common thread: complex commercial operations that warrant disciplined infrastructure.",
