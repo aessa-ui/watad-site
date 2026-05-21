@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --watad-ink: #1d1d1f;
+  --watad-bone: #faf9f5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--watad-bone);
+    color: var(--watad-ink);
+    font-family: var(--font-plex-arabic), var(--font-plex-sans), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* English mirror prefers the Latin family lead. */
+  html[lang="en"] body {
+    font-family: var(--font-plex-sans), var(--font-plex-arabic), sans-serif;
+  }
+
+  /* Visible keyboard focus — 2px Watad Teal, 2px offset. Never removed. */
+  :focus-visible {
+    outline: 2px solid #1f4747;
+    outline-offset: 2px;
+  }
+
+  /* Latin spans inside Arabic body (B2B, Watad) stay LTR. */
+  [lang="en"] {
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+}
+
+@layer utilities {
+  /* 8% Watad Ink overlay — the primary hover treatment on CTAs. */
+  .hover-ink-overlay {
+    position: relative;
+  }
+  .hover-ink-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #1d1d1f;
+    opacity: 0;
+    transition: opacity 150ms ease;
+    pointer-events: none;
+  }
+  .hover-ink-overlay:hover::after {
+    opacity: 0.08;
+  }
+
+  /*
+   * Hero atmospheric background — extremely faint teal radial gradient
+   * centered above the viewport. Creates perceived depth without being
+   * visible as a gradient. At 4% teal opacity this is a warmth hint only.
+   */
+  .hero-atmosphere {
+    background-image: radial-gradient(
+      ellipse 80% 55% at 50% -5%,
+      rgba(31, 71, 71, 0.045) 0%,
+      transparent 68%
+    );
+  }
+
+  /*
+   * Card hover lift — 200ms, subtle shadow + 2px upward translate.
+   * Applied to sector and engagement cards.
+   */
+  .card-hover {
+    transition: transform 200ms cubic-bezier(0.25, 0.1, 0.25, 1),
+      box-shadow 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(29, 29, 31, 0.09);
+  }
+}
+
+/*
+ * Reduced motion — global guard (spec S4 accessibility note).
+ * Framer Motion reveals are also guarded in JS via useReducedMotion();
+ * this CSS block catches CSS-driven transitions as a second layer.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
