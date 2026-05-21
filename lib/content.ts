@@ -405,48 +405,6 @@ export const content = {
     ],
   },
 
-  caseStudies: {
-    overline: { ar: "نماذج الارتباط", en: "ENGAGEMENT PROFILES" } as Bi,
-    h2: { ar: "كيف يبدو الارتباط الناجح", en: "What a Watad engagement looks like" } as Bi,
-    lead: {
-      ar: "ثلاثة نماذج من أنواع الارتباطات التي نُشغّلها. التفاصيل التجارية سرية — هذا يصف البنية التشغيلية.",
-      en: "Three profiles of the engagement types we operate. Commercial details are confidential — these describe operating structure.",
-    } as Bi,
-    profiles: [
-      {
-        category: { ar: "خدمات B2B · الرياض", en: "B2B Services · Riyadh" } as Bi,
-        engagement: { ar: "باقة تجريبية — 30 يوماً", en: "Pilot Engagement — 30 Days" } as Bi,
-        description: {
-          ar: "شركة خدمات إقليمية تستهدف حسابات القطاع الخاص والحكومي في منطقة الرياض. بنينا قائمة الحسابات المستهدفة، شغّلنا سلسلة التواصل، وأهّلنا الفرص وفق معايير موقّعة.",
-          en: "A regional services firm targeting private-sector and government-adjacent accounts in the Riyadh region. We built the target account list, operated the outreach cadence, and qualified opportunities against signed criteria.",
-        } as Bi,
-        region: { ar: "المملكة العربية السعودية", en: "Saudi Arabia" } as Bi,
-      },
-      {
-        category: { ar: "تقنية المؤسسات · الخليج", en: "Enterprise Technology · GCC" } as Bi,
-        engagement: { ar: "استمرار تشغيلي بعد الباقة التجريبية", en: "Continued Operations Post-Pilot" } as Bi,
-        description: {
-          ar: "شركة تقنية مؤسسية بعد تجربة أولى ناجحة. نفس الانضباط التشغيلي، إيقاع مستمر، واستهداف مُحسَّن بناءً على نتائج التجربة الأولى.",
-          en: "An enterprise technology firm following a successful pilot. Same operating discipline, ongoing cadence, and refined targeting based on pilot learnings.",
-        } as Bi,
-        region: { ar: "منطقة الخليج العربي", en: "Gulf Region" } as Bi,
-      },
-      {
-        category: { ar: "إدارة مرافق · السعودية", en: "Facility Management · KSA" } as Bi,
-        engagement: { ar: "نطاق مخصص — متعدد الشرائح", en: "Custom Scope — Multi-Segment" } as Bi,
-        description: {
-          ar: "شركة إدارة مرافق تستهدف الحسابات الكبرى عبر شرائح متعددة في السعودية. نطاق مخصص مع قائد تشغيل مخصص وتواصل مصمَّم لكل شريحة على حدة.",
-          en: "A facilities management firm targeting large accounts across multiple segments in KSA. Custom scope with a dedicated operating lead and segment-specific outreach design.",
-        } as Bi,
-        region: { ar: "المملكة العربية السعودية", en: "Saudi Arabia" } as Bi,
-      },
-    ],
-    closing: {
-      ar: "نطاق العمل والشروط التجارية تُحدَّد بعد جلسة الاستكشاف، وفق احتياج كل شركة.",
-      en: "Scope and commercial terms are defined after the discovery conversation, calibrated to each firm.",
-    } as Bi,
-  },
-
   privacyPage: {
     title: { ar: "سياسة الخصوصية", en: "Privacy Policy" } as Bi,
     body: [

@@ -1,17 +1,17 @@
 "use client";
 
 /**
- * Watad homepage — premium Tier-1 B2B, eight sections.
+ * Watad homepage — eight sections, canon-safe.
  * Header (fixed) →
- *   1. Hero (upgraded — dual CTA + proof chips)
- *   2. TrustedBy (sector text grid)
+ *   1. Hero
+ *   2. TrustedBy (sector text only — no logos)
  *   3. Services (3 pillars)
  *   4. OperationalCapabilities (4-step methodology)
  *   5. WhyWatad (3 differentiators)
- *   6. CaseStudies (engagement profiles)
+ *   6. Engagements (honest engagement model — Pilot / Continued / Custom)
  *   7. ClosingCTA (dark teal anchor)
  * → Footer.
- * Plus mobile sticky CTA bar. Arabic-primary, English mirror.
+ * MobileStickyBar (booking + WhatsApp). Arabic-primary, English mirror.
  */
 
 import { useLang } from "@/lib/LanguageContext";
@@ -22,11 +22,10 @@ import { TrustedBy } from "@/components/TrustedBy";
 import { Services } from "@/components/Services";
 import { OperationalCapabilities } from "@/components/OperationalCapabilities";
 import { WhyWatad } from "@/components/WhyWatad";
-import { CaseStudies } from "@/components/CaseStudies";
+import { Engagements } from "@/components/Engagements";
 import { ClosingCTA } from "@/components/ClosingCTA";
 import { Footer } from "@/components/Footer";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 export default function Home() {
   const { lang } = useLang();
@@ -48,14 +47,12 @@ export default function Home() {
         <Services />
         <OperationalCapabilities />
         <WhyWatad />
-        <CaseStudies />
+        <Engagements />
         <ClosingCTA />
       </main>
 
       <Footer />
-      {/* Mobile CTAs: sticky bar (booking + whatsapp) + floating whatsapp circle */}
       <MobileStickyBar />
-      <FloatingWhatsApp />
     </>
   );
 }

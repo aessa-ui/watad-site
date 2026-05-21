@@ -30,7 +30,7 @@ export function Engagements() {
           {e.cards.map((card, i) => (
             <RevealItem
               key={i}
-              className="card-hover flex flex-col border border-line bg-bone p-s4 shadow-ambient md:p-s5"
+              className="flex flex-col border border-line bg-bone p-s4 md:p-s5"
             >
               <h3 className="text-h3-m font-semibold text-ink md:text-h3">
                 {card.title[lang]}
