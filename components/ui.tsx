@@ -66,11 +66,12 @@ export function PrimaryCTA({
       className={[
         "inline-flex items-center justify-center overflow-hidden",
         "rounded-[4px] px-s5 py-[14px] text-button font-medium",
-        "transition-[transform,box-shadow,opacity] duration-200",
-        "hover:-translate-y-[1px]",
+        // Flat by design — no shadow, no lift. Hover is opacity only
+        // (8% ink overlay on teal; slight dim on bone). Locked spec S8.
+        "transition-[background-color,opacity] duration-150",
         isBone
-          ? "bg-bone text-ink shadow-btn hover:bg-bone/90 hover:shadow-btn-hover"
-          : "hover-ink-overlay bg-teal text-bone shadow-btn hover:shadow-btn-hover",
+          ? "bg-bone text-ink hover:bg-bone/90"
+          : "hover-ink-overlay bg-teal text-bone",
         fullWidthMobile ? "w-full sm:w-auto" : "",
       ].join(" ")}
     >

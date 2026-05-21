@@ -139,15 +139,7 @@ export default function RootLayout({
       dir="rtl"
       className={`${plexArabic.variable} ${plexSans.variable}`}
     >
-      <head>
-        {/* Preconnect to Google Fonts CDN for faster font loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
+      {/* next/font self-hosts the font files — no external preconnect needed. */}
       <body>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
