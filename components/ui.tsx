@@ -45,28 +45,32 @@ export function Wordmark({
   );
 }
 
-/* ── PrimaryCTA — filled Watad Teal ──────────────────────── */
+/* ── PrimaryCTA — filled Watad Teal (default) or Bone inverse ── */
 export function PrimaryCTA({
   label,
   href,
   fullWidthMobile = false,
+  variant = "teal",
 }: {
   label: string;
   href: string;
   fullWidthMobile?: boolean;
+  variant?: "teal" | "bone";
 }) {
+  const isBone = variant === "bone";
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       className={[
-        "hover-ink-overlay inline-flex items-center justify-center overflow-hidden",
-        "rounded-[4px] bg-teal px-s5 py-[14px] text-button font-medium text-bone",
-        // Ambient teal shadow + lift on hover — premium depth
-        "shadow-btn hover:shadow-btn-hover",
-        "transition-[transform,box-shadow] duration-200",
+        "inline-flex items-center justify-center overflow-hidden",
+        "rounded-[4px] px-s5 py-[14px] text-button font-medium",
+        "transition-[transform,box-shadow,opacity] duration-200",
         "hover:-translate-y-[1px]",
+        isBone
+          ? "bg-bone text-ink shadow-btn hover:bg-bone/90 hover:shadow-btn-hover"
+          : "hover-ink-overlay bg-teal text-bone shadow-btn hover:shadow-btn-hover",
         fullWidthMobile ? "w-full sm:w-auto" : "",
       ].join(" ")}
     >
@@ -131,14 +135,20 @@ export function Section({
   id?: string;
   children: ReactNode;
   className?: string;
-  tone?: "bone" | "softbone";
+  tone?: "bone" | "softbone" | "dark";
 }) {
+  const bg =
+    tone === "dark"
+      ? "bg-teal"
+      : tone === "softbone"
+      ? "bg-softbone"
+      : "bg-bone";
   return (
     <section
       id={id}
       className={[
         "scroll-mt-24 py-section-m md:py-section-t lg:py-section-d",
-        tone === "softbone" ? "bg-softbone" : "bg-bone",
+        bg,
         className,
       ].join(" ")}
     >

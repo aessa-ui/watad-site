@@ -36,10 +36,16 @@ export const content = {
       en: "We operate the commercial layer that turns intent into qualified meetings on your team's calendar.",
     } as Bi,
     cta: { ar: "احجز جلسة", en: "Book a conversation" } as Bi,
+    ctaSecondary: { ar: "واتساب", en: "WhatsApp" } as Bi,
     trust: {
       ar: `شركة عمليات نمو إقليمية. مقرها ${config.cityAr}.`,
       en: `A regional growth operations firm. Headquartered in ${config.cityEn}.`,
     } as Bi,
+    proofChips: [
+      { ar: "التزام تعاقدي", en: "Contractual commitment" } as Bi,
+      { ar: "حصرية القطاع", en: "Sector exclusivity" } as Bi,
+      { ar: "تقرير يومي", en: "Daily reporting" } as Bi,
+    ],
   },
 
   sectors: {
@@ -291,6 +297,7 @@ export const content = {
       en: "Fifteen minutes to review your situation and assess whether the model fits. No commitment, no sales pitch — just a working conversation.",
     } as Bi,
     cta: { ar: "احجز جلسة", en: "Book a conversation" } as Bi,
+    ctaSecondary: { ar: "راسلنا عبر واتساب", en: "Message us on WhatsApp" } as Bi,
   },
 
   footer: {
@@ -313,6 +320,130 @@ export const content = {
     copyright: {
       ar: `© ${config.year} Watad. كل الحقوق محفوظة.`,
       en: `© ${config.year} Watad. All rights reserved.`,
+    } as Bi,
+  },
+
+  trustedBy: {
+    overline: { ar: "لمن نعمل", en: "WHO WE WORK WITH" } as Bi,
+    h2: { ar: "القطاعات التي نخدمها", en: "Sectors we serve" } as Bi,
+    lead: {
+      ar: "نعمل مع الشركات التي تبيع خدمات وحلولاً عالية القيمة للمؤسسات والجهات الحكومية في السعودية والخليج ومصر.",
+      en: "We work with firms selling high-value services and solutions into corporate and government buyers across Saudi Arabia, the GCC, and Egypt.",
+    } as Bi,
+    sectors: [
+      { ar: "الاستشارات والخدمات المتخصصة", en: "Specialist Consulting & Services" } as Bi,
+      { ar: "التقنية وحلول المؤسسات", en: "Technology & Enterprise Solutions" } as Bi,
+      { ar: "الفعاليات والعمليات", en: "Events & Operations" } as Bi,
+      { ar: "إدارة المرافق", en: "Facility Management" } as Bi,
+      { ar: "الأمن والسلامة", en: "Security & Safety" } as Bi,
+      { ar: "الموارد البشرية والتدريب", en: "HR, Manpower & Training" } as Bi,
+      { ar: "اللوجستيات وسلاسل الإمداد", en: "Logistics & Supply Chain" } as Bi,
+      { ar: "التوريد الحكومي", en: "Government Procurement" } as Bi,
+    ],
+    closing: {
+      ar: "القاسم المشترك: قيمة الصفقة الواحدة تستحق إيقاع متابعة احترافي ومنظم.",
+      en: "The common thread: deal sizes that warrant a disciplined commercial cadence.",
+    } as Bi,
+  },
+
+  services: {
+    overline: { ar: "الخدمات", en: "SERVICES" } as Bi,
+    h2: { ar: "ما نُشغّله لكم", en: "What we operate" } as Bi,
+    items: [
+      {
+        number: { ar: "٠١", en: "01" } as Bi,
+        title: { ar: "توليد خط الفرص", en: "Pipeline Generation" } as Bi,
+        body: {
+          ar: "نبني قائمة حسابات مؤهلة تطابق شريحتكم المستهدفة، ونُشغّل سلسلة تواصل احترافية عبر البريد الإلكتروني، لينكدإن، وواتساب الأعمال. النتيجة: لقاءات تجارية مؤهلة على تقويم فريقكم.",
+          en: "We build a qualified account list matched to your ICP and operate structured outreach across email, LinkedIn, and WhatsApp Business. The result: qualified commercial meetings on your team's calendar.",
+        } as Bi,
+      },
+      {
+        number: { ar: "٠٢", en: "02" } as Bi,
+        title: { ar: "البنية التشغيلية التجارية", en: "Commercial Infrastructure" } as Bi,
+        body: {
+          ar: "نبني معايير التأهيل ونُشغّل منظومة التتبع والمتابعة اليومية. كل تفاعل موثّق، كل فرصة تُعالج في الوقت المناسب، كل خطوة قابلة للمراجعة.",
+          en: "We build qualification criteria and operate the daily tracking and follow-up system. Every interaction documented, every opportunity handled in time, every step reviewable.",
+        } as Bi,
+      },
+      {
+        number: { ar: "٠٣", en: "03" } as Bi,
+        title: { ar: "المساءلة والتقارير", en: "Accountability & Reporting" } as Bi,
+        body: {
+          ar: "تقرير يومي مختصر، مراجعة أسبوعية، وتقرير ختامي في اليوم الثلاثين. رؤية كاملة لكل ما يحدث في خط التواصل والمتابعة.",
+          en: "A brief daily report, a weekly review, and a Day-30 close-out report. Full visibility into every action in the outreach and follow-up pipeline.",
+        } as Bi,
+      },
+    ],
+  },
+
+  whyWatad: {
+    overline: { ar: "لماذا وتد", en: "WHY WATAD" } as Bi,
+    h2: { ar: "ما يميّزنا", en: "What sets us apart" } as Bi,
+    items: [
+      {
+        title: { ar: "التزام تعاقدي", en: "Contractual Commitment" } as Bi,
+        body: {
+          ar: "نلتزم بعدد محدد من اللقاءات المؤهلة في 30 يوماً، مُثبَّت كتابياً قبل الانطلاق. إن لم نصل للعدد المتفق عليه، رسم النجاح يُلغى ولا يُستحق.",
+          en: "We commit to a defined number of qualified meetings in 30 days, recorded in writing before work begins. If the target is not delivered, the success fee is waived and not owed.",
+        } as Bi,
+      },
+      {
+        title: { ar: "حصرية القطاع", en: "Sector Exclusivity" } as Bi,
+        body: {
+          ar: "لا نعمل مع شركتين متنافستين في نفس القطاع في آنٍ واحد. العميل النشط يملك حصرية قطاعه طوال فترة الالتزام.",
+          en: "We do not work with competing firms in the same sector simultaneously. The active client owns sector exclusivity for the duration of the engagement.",
+        } as Bi,
+      },
+      {
+        title: { ar: "تنفيذ لا استشارة", en: "Execution, Not Advice" } as Bi,
+        body: {
+          ar: "لسنا وكالة تسويق ولا استشارة بدون تنفيذ. نحن طبقة تشغيلية تُنجز العمل. اللقاءات تصل إلى فريقكم — الإغلاق يبقى عملهم.",
+          en: "We are not a marketing agency, not advisory without execution. We are an operating layer that does the work. Meetings land with your team — the close stays theirs.",
+        } as Bi,
+      },
+    ],
+  },
+
+  caseStudies: {
+    overline: { ar: "نماذج الارتباط", en: "ENGAGEMENT PROFILES" } as Bi,
+    h2: { ar: "كيف يبدو الارتباط الناجح", en: "What a Watad engagement looks like" } as Bi,
+    lead: {
+      ar: "ثلاثة نماذج من أنواع الارتباطات التي نُشغّلها. التفاصيل التجارية سرية — هذا يصف البنية التشغيلية.",
+      en: "Three profiles of the engagement types we operate. Commercial details are confidential — these describe operating structure.",
+    } as Bi,
+    profiles: [
+      {
+        category: { ar: "خدمات B2B · الرياض", en: "B2B Services · Riyadh" } as Bi,
+        engagement: { ar: "باقة تجريبية — 30 يوماً", en: "Pilot Engagement — 30 Days" } as Bi,
+        description: {
+          ar: "شركة خدمات إقليمية تستهدف حسابات القطاع الخاص والحكومي في منطقة الرياض. بنينا قائمة الحسابات المستهدفة، شغّلنا سلسلة التواصل، وأهّلنا الفرص وفق معايير موقّعة.",
+          en: "A regional services firm targeting private-sector and government-adjacent accounts in the Riyadh region. We built the target account list, operated the outreach cadence, and qualified opportunities against signed criteria.",
+        } as Bi,
+        region: { ar: "المملكة العربية السعودية", en: "Saudi Arabia" } as Bi,
+      },
+      {
+        category: { ar: "تقنية المؤسسات · الخليج", en: "Enterprise Technology · GCC" } as Bi,
+        engagement: { ar: "استمرار تشغيلي بعد الباقة التجريبية", en: "Continued Operations Post-Pilot" } as Bi,
+        description: {
+          ar: "شركة تقنية مؤسسية بعد تجربة أولى ناجحة. نفس الانضباط التشغيلي، إيقاع مستمر، واستهداف مُحسَّن بناءً على نتائج التجربة الأولى.",
+          en: "An enterprise technology firm following a successful pilot. Same operating discipline, ongoing cadence, and refined targeting based on pilot learnings.",
+        } as Bi,
+        region: { ar: "منطقة الخليج العربي", en: "Gulf Region" } as Bi,
+      },
+      {
+        category: { ar: "إدارة مرافق · السعودية", en: "Facility Management · KSA" } as Bi,
+        engagement: { ar: "نطاق مخصص — متعدد الشرائح", en: "Custom Scope — Multi-Segment" } as Bi,
+        description: {
+          ar: "شركة إدارة مرافق تستهدف الحسابات الكبرى عبر شرائح متعددة في السعودية. نطاق مخصص مع قائد تشغيل مخصص وتواصل مصمَّم لكل شريحة على حدة.",
+          en: "A facilities management firm targeting large accounts across multiple segments in KSA. Custom scope with a dedicated operating lead and segment-specific outreach design.",
+        } as Bi,
+        region: { ar: "المملكة العربية السعودية", en: "Saudi Arabia" } as Bi,
+      },
+    ],
+    closing: {
+      ar: "نطاق العمل والشروط التجارية تُحدَّد بعد جلسة الاستكشاف، وفق احتياج كل شركة.",
+      en: "Scope and commercial terms are defined after the discovery conversation, calibrated to each firm.",
     } as Bi,
   },
 

@@ -1,9 +1,16 @@
 "use client";
 
 /**
- * Watad homepage — single page, eight content sections.
- * Header (fixed) → Hero → Sectors → Anti-positioning → Methodology
- * → Commitment → Engagements → FAQ → Closing CTA → Footer.
+ * Watad homepage — premium Tier-1 B2B, eight sections.
+ * Header (fixed) →
+ *   1. Hero (upgraded — dual CTA + proof chips)
+ *   2. TrustedBy (sector text grid)
+ *   3. Services (3 pillars)
+ *   4. OperationalCapabilities (4-step methodology)
+ *   5. WhyWatad (3 differentiators)
+ *   6. CaseStudies (engagement profiles)
+ *   7. ClosingCTA (dark teal anchor)
+ * → Footer.
  * Plus mobile sticky CTA bar. Arabic-primary, English mirror.
  */
 
@@ -11,12 +18,11 @@ import { useLang } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Sectors } from "@/components/Sectors";
-import { AntiPositioning } from "@/components/AntiPositioning";
-import { Methodology } from "@/components/Methodology";
-import { Commitment } from "@/components/Commitment";
-import { Engagements } from "@/components/Engagements";
-import { FAQ } from "@/components/FAQ";
+import { TrustedBy } from "@/components/TrustedBy";
+import { Services } from "@/components/Services";
+import { OperationalCapabilities } from "@/components/OperationalCapabilities";
+import { WhyWatad } from "@/components/WhyWatad";
+import { CaseStudies } from "@/components/CaseStudies";
 import { ClosingCTA } from "@/components/ClosingCTA";
 import { Footer } from "@/components/Footer";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
@@ -37,12 +43,11 @@ export default function Home() {
 
       <main id="content">
         <Hero />
-        <Sectors />
-        <AntiPositioning />
-        <Methodology />
-        <Commitment />
-        <Engagements />
-        <FAQ />
+        <TrustedBy />
+        <Services />
+        <OperationalCapabilities />
+        <WhyWatad />
+        <CaseStudies />
         <ClosingCTA />
       </main>
 

@@ -2,13 +2,13 @@
 
 /**
  * Hero. Static on load — the only block that never fades (spec S4).
- * Two-beat Display headline, single-sentence subhead, one primary
- * CTA, text-only trust strip. Heaviest whitespace on the page.
+ * Two-beat Display headline, single-sentence subhead, dual CTA
+ * (Calendly + WhatsApp), proof chips, text-only trust strip.
  */
 
 import { useLang } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
-import { config } from "@/lib/config";
+import { config, whatsappUrl } from "@/lib/config";
 import { Container, PrimaryCTA } from "./ui";
 
 export function Hero() {
@@ -30,15 +30,36 @@ export function Hero() {
           {h.subhead[lang]}
         </p>
 
-        <div className="mt-s5 flex justify-center">
+        {/* Dual CTA: primary booking + secondary WhatsApp */}
+        <div className="mt-s5 flex flex-col items-center justify-center gap-s3 sm:flex-row">
           <PrimaryCTA
             label={h.cta[lang]}
             href={config.calendlyUrl}
             fullWidthMobile
           />
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-button font-medium text-muted underline-offset-4 hover:text-ink hover:underline"
+          >
+            {h.ctaSecondary[lang]}
+          </a>
         </div>
 
-        <p className="mt-s5 text-caption text-muted">{h.trust[lang]}</p>
+        {/* Proof chips */}
+        <div className="mt-s5 flex flex-wrap items-center justify-center gap-x-s3 gap-y-s2">
+          {h.proofChips.map((chip, i) => (
+            <span key={i} className="flex items-center gap-x-s3">
+              <span className="text-caption text-muted">{chip[lang]}</span>
+              {i < h.proofChips.length - 1 && (
+                <span className="text-muted opacity-30" aria-hidden="true">·</span>
+              )}
+            </span>
+          ))}
+        </div>
+
+        <p className="mt-s3 text-caption text-muted/60">{h.trust[lang]}</p>
       </Container>
     </section>
   );
