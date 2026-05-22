@@ -257,8 +257,8 @@ export const content = {
       {
         title: { ar: "التزام تعاقدي", en: "Contractual Commitment" } as Bi,
         body: {
-          ar: "نلتزم بعدد محدد من اللقاءات المؤهلة في 30 يوماً، مُثبَّت كتابياً قبل الانطلاق. إن لم نصل للعدد المتفق عليه، رسم النجاح يُلغى ولا يُستحق.",
-          en: "We commit to a defined number of qualified meetings in 30 days, recorded in writing before work begins. If the target is not delivered, the success fee is waived and not owed.",
+          ar: "يُثبَّت نطاق الباقة، ومعايير التأهيل، والرسوم، وإيقاع التقارير، والمراجعة الختامية كتابةً قبل بدء العمل.",
+          en: "Pilot scope, qualification criteria, fee, reporting rhythm, and close-out review are recorded in writing before work begins.",
         } as Bi,
       },
       {
