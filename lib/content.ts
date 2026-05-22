@@ -264,7 +264,7 @@ export const content = {
       {
         title: { ar: "حصرية القطاع", en: "Sector Exclusivity" } as Bi,
         body: {
-          ar: "لا نعمل مع شركتين متنافستين في نفس القطاع في آنٍ واحد. العميل النشط يملك حصرية قطاعه طوال فترة الالتزام.",
+          ar: "لا نعمل مع شركتين متنافستين في نفس القطاع في آنٍ واحد. العميل النشط يملك حصرية قطاعه طوال مدة الباقة التجريبية.",
           en: "We do not work with competing firms in the same sector simultaneously. The active client owns sector exclusivity for the duration of the engagement.",
         } as Bi,
       },
