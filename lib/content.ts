@@ -37,8 +37,8 @@ export const content = {
       en: "For services firms in Saudi Arabia and the GCC.",
     } as Bi,
     subhead: {
-      ar: "نُشغّل عمليات التواصل والمتابعة التجارية التي توصل لقاءات مؤهلة إلى تقويم فريقكم.",
-      en: "We operate the outreach and follow-up that delivers qualified meetings onto your team's calendar.",
+      ar: "نُشغّل تواصلاً ومتابعةً منظّمة تحرّك الفرص الجادة نحو لقاءات تجارية مؤهلة.",
+      en: "We operate structured outreach and follow-up that moves serious opportunities toward qualified commercial meetings.",
     } as Bi,
     cta: { ar: "احجز جلسة", en: "Book a conversation" } as Bi,
     ctaSecondary: { ar: "واتساب", en: "WhatsApp" } as Bi,
