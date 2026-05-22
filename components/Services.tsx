@@ -2,7 +2,7 @@
 
 /**
  * Section 3 — Services.
- * Three service pillars: Pipeline Generation, Commercial
+ * Three service pillars: Outreach & Follow-Up, Commercial
  * Infrastructure, Accountability & Reporting.
  * Large typographic number accent + teal rule below.
  * Bone tone. 80ms stagger.

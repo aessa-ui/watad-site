@@ -18,11 +18,11 @@ export type Bi = { ar: string; en: string };
 
 export const content = {
   meta: {
-    title: "Watad — B2B Growth Operations · KSA · GCC · Egypt",
+    title: "Watad — Commercial Follow-Up Operations · KSA · GCC",
     descriptionAr:
-      "نُشغّل البنية التشغيلية التي تنقل النية التجارية إلى لقاءات مؤهلة على تقويم فريقكم.",
+      "تشغيل المتابعة التجارية لشركات الخدمات في السعودية والخليج.",
     descriptionEn:
-      "We operate the commercial layer that turns intent into qualified meetings on your team's calendar.",
+      "Commercial follow-up operations for services firms in Saudi Arabia and the GCC.",
   },
 
   nav: {
@@ -31,20 +31,20 @@ export const content = {
   },
 
   hero: {
-    headline1: { ar: "عمليات نمو B2B.", en: "B2B growth operations." } as Bi,
+    headline1: { ar: "تشغيل المتابعة التجارية.", en: "Commercial follow-up operations." } as Bi,
     headline2: {
-      ar: "للسعودية، الخليج، ومصر.",
-      en: "For Saudi Arabia, the GCC, and Egypt.",
+      ar: "لشركات الخدمات في السعودية والخليج.",
+      en: "For services firms in Saudi Arabia and the GCC.",
     } as Bi,
     subhead: {
-      ar: "نُشغّل البنية التشغيلية التي تنقل النية التجارية إلى لقاءات مؤهلة على تقويم فريقكم.",
-      en: "We operate the commercial layer that turns intent into qualified meetings on your team's calendar.",
+      ar: "نُشغّل عمليات التواصل والمتابعة التجارية التي توصل لقاءات مؤهلة إلى تقويم فريقكم.",
+      en: "We operate the outreach and follow-up that delivers qualified meetings onto your team's calendar.",
     } as Bi,
     cta: { ar: "احجز جلسة", en: "Book a conversation" } as Bi,
     ctaSecondary: { ar: "واتساب", en: "WhatsApp" } as Bi,
     trust: {
-      ar: `شركة عمليات نمو إقليمية. مقرها ${config.cityAr}.`,
-      en: `A regional growth operations firm. Headquartered in ${config.cityEn}.`,
+      ar: `تشغيل المتابعة التجارية لشركات الخدمات. مقرها ${config.cityAr}.`,
+      en: `Commercial follow-up operations for services firms. Headquartered in ${config.cityEn}.`,
     } as Bi,
     // Operating principles, not metrics — true descriptors of the model.
     proofChips: [
@@ -68,7 +68,7 @@ export const content = {
         title: { ar: "التحديد", en: "Identify" } as Bi,
         body: {
           ar: "نبني قائمة بـ 200 شركة تطابق شريحتكم المستهدفة، مع تحديد أسماء صنّاع القرار في كل شركة وإشارات الشراء الحالية لديهم.",
-          en: "We build a list of 200 firms matching your ICP, with named decision-makers and current buying signals.",
+          en: "We build a list of 200 firms matching your target segment, with named decision-makers and current buying signals.",
         } as Bi,
       },
       {
@@ -178,8 +178,8 @@ export const content = {
   footer: {
     brandName: "Watad",
     brandDescriptor: {
-      ar: "شركة عمليات نمو B2B.",
-      en: "A B2B growth operations firm.",
+      ar: "تشغيل المتابعة التجارية لشركات الخدمات.",
+      en: "Commercial follow-up operations for services firms.",
     } as Bi,
     brandRegions: { ar: "السعودية · الخليج · مصر.", en: "KSA · GCC · Egypt." } as Bi,
     contactLabel: { ar: "تواصل", en: "Contact" } as Bi,
@@ -225,10 +225,10 @@ export const content = {
     items: [
       {
         number: { ar: "٠١", en: "01" } as Bi,
-        title: { ar: "توليد خط الفرص", en: "Pipeline Generation" } as Bi,
+        title: { ar: "التواصل والمتابعة", en: "Outreach & Follow-Up" } as Bi,
         body: {
           ar: "نبني قائمة حسابات مؤهلة تطابق شريحتكم المستهدفة، ونُشغّل سلسلة تواصل احترافية عبر البريد الإلكتروني، لينكدإن، وواتساب الأعمال. النتيجة: لقاءات تجارية مؤهلة على تقويم فريقكم.",
-          en: "We build a qualified account list matched to your ICP and operate structured outreach across email, LinkedIn, and WhatsApp Business. The result: qualified commercial meetings on your team's calendar.",
+          en: "We build a qualified account list matched to your target segment and operate structured outreach across email, LinkedIn, and WhatsApp Business. The result: qualified commercial meetings on your team's calendar.",
         } as Bi,
       },
       {
@@ -244,7 +244,7 @@ export const content = {
         title: { ar: "المساءلة والتقارير", en: "Accountability & Reporting" } as Bi,
         body: {
           ar: "تقرير يومي مختصر، مراجعة أسبوعية، وتقرير ختامي في اليوم الثلاثين. رؤية كاملة لكل ما يحدث في خط التواصل والمتابعة.",
-          en: "A brief daily report, a weekly review, and a Day-30 close-out report. Full visibility into every action in the outreach and follow-up pipeline.",
+          en: "A brief daily report, a weekly review, and a Day-30 close-out report. Full visibility into every action in the outreach and follow-up cadence.",
         } as Bi,
       },
     ],
@@ -297,8 +297,8 @@ export const content = {
     title: { ar: "الشروط والأحكام", en: "Terms" } as Bi,
     body: [
       {
-        ar: "هذا الموقع تعريفي لخدمات Watad في عمليات النمو التجاري. المحتوى المعروض لأغراض معلوماتية، ولا يُشكّل عرضاً تعاقدياً ملزماً. نطاق العمل والشروط التجارية تُحدَّد حصراً في اتفاقية مكتوبة يوقّعها الطرفان بعد جلسة الاستكشاف.",
-        en: "This website introduces Watad's commercial growth operations services. The content shown is informational and does not constitute a binding contractual offer. Scope of work and commercial terms are defined solely in a written agreement signed by both parties after the discovery conversation.",
+        ar: "هذا الموقع تعريفي لخدمات Watad في المتابعة التجارية لشركات الخدمات. المحتوى المعروض لأغراض معلوماتية، ولا يُشكّل عرضاً تعاقدياً ملزماً. نطاق العمل والشروط التجارية تُحدَّد حصراً في اتفاقية مكتوبة يوقّعها الطرفان بعد جلسة الاستكشاف.",
+        en: "This website introduces Watad's commercial follow-up operations for services firms. The content shown is informational and does not constitute a binding contractual offer. Scope of work and commercial terms are defined solely in a written agreement signed by both parties after the discovery conversation.",
       },
       {
         ar: "تحتفظ Watad بحق تحديث محتوى الموقع في أي وقت. للأسئلة المتعلقة بهذه الشروط، يُرجى التواصل عبر البريد الإلكتروني الموضّح في تذييل الموقع. هذه نسخة مختصرة للإصدار الأول من الموقع.",
