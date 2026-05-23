@@ -2,7 +2,7 @@
   "name": "watad-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Watad — B2B growth operations. Single-page Arabic-primary site with English mirror.",
+  "description": "Watad — commercial follow-up operations for services firms in Saudi Arabia and the GCC.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -50,7 +50,7 @@ export const content = {
     proofChips: [
       { ar: "التزام تعاقدي", en: "Contractual commitment" } as Bi,
       { ar: "حصرية القطاع", en: "Sector exclusivity" } as Bi,
-      { ar: "تقرير يومي", en: "Daily reporting" } as Bi,
+      { ar: "تقارير تشغيلية", en: "Operational reporting" } as Bi,
     ],
   },
 
@@ -94,8 +94,8 @@ export const content = {
         numEn: "4",
         title: { ar: "التسليم", en: "Deliver" } as Bi,
         body: {
-          ar: "لقاءات تجارية جادة تُحجز مباشرة على تقويم فريقكم، مع تقرير يومي مختصر يُلخّص ما تم في الأربع والعشرين ساعة الماضية.",
-          en: "Qualified meetings booked directly onto your team's calendar, with a brief daily report on the prior 24 hours.",
+          ar: "لقاءات تجارية جادة تُحجز مباشرة على تقويم فريقكم، مع تقارير تشغيلية منتظمة على مدار الباقة.",
+          en: "Qualified meetings booked directly onto your team's calendar, with regular operational reporting throughout the engagement.",
         } as Bi,
       },
     ],
@@ -114,12 +114,12 @@ export const content = {
         points: [
           { ar: "ثلاثون يوماً تشغيلياً", en: "A thirty-day structured operational sprint" },
           {
-            ar: "نبني قائمة الحسابات المستهدفة، نُشغّل سلسلة التواصل والمتابعة، نُؤهّل الفرص وفق معايير موقّعة، ونحجز اللقاءات على تقويم فريقكم",
-            en: "We build the target account list, operate the outreach and follow-up cadence, qualify opportunities against signed criteria, and book qualified meetings to your team's calendar",
+            ar: "نبني قائمة الحسابات المستهدفة، نُشغّل سلسلة التواصل والمتابعة، نُؤهّل الفرص وفق معايير متفق عليها، ونحرّك الفرص الجادة نحو لقاءات تجارية مؤهلة",
+            en: "We build the target account list, operate the outreach and follow-up cadence, qualify opportunities against agreed qualification criteria, and move serious opportunities toward qualified commercial meetings",
           },
           {
-            ar: "اتفاقية صفحة واحدة بعدد لقاءات مؤهلة محدد ومُثبَّت كتابياً قبل الانطلاق",
-            en: "One-page agreement with a defined qualified-meeting commitment, signed before kickoff",
+            ar: "اتفاقية صفحة واحدة تُثبت النطاق، ومعايير التأهيل، ورسم التشغيل، وإيقاع التقارير، والمراجعة الختامية قبل الانطلاق.",
+            en: "A one-page agreement recording scope, qualification criteria, operating fee, reporting rhythm, and close-out review before kickoff.",
           },
         ] as Bi[],
       },
@@ -181,7 +181,7 @@ export const content = {
       ar: "تشغيل المتابعة التجارية لشركات الخدمات.",
       en: "Commercial follow-up operations for services firms.",
     } as Bi,
-    brandRegions: { ar: "السعودية · الخليج · مصر.", en: "KSA · GCC · Egypt." } as Bi,
+    brandRegions: { ar: "السعودية · الخليج.", en: "KSA · GCC." } as Bi,
     contactLabel: { ar: "تواصل", en: "Contact" } as Bi,
     legalLabel: { ar: "قانوني", en: "Legal" } as Bi,
     privacy: { ar: "سياسة الخصوصية", en: "Privacy Policy" } as Bi,
@@ -243,8 +243,8 @@ export const content = {
         number: { ar: "٠٣", en: "03" } as Bi,
         title: { ar: "المساءلة والتقارير", en: "Accountability & Reporting" } as Bi,
         body: {
-          ar: "تقرير يومي مختصر، مراجعة أسبوعية، وتقرير ختامي في اليوم الثلاثين. رؤية كاملة لكل ما يحدث في خط التواصل والمتابعة.",
-          en: "A brief daily report, a weekly review, and a Day-30 close-out report. Full visibility into every action in the outreach and follow-up cadence.",
+          ar: "تقارير تشغيلية منتظمة، مراجعة أسبوعية، وتقرير ختامي في اليوم الثلاثين. رؤية كاملة لكل ما يحدث في خط التواصل والمتابعة.",
+          en: "Regular operational reporting, a weekly review, and a Day-30 close-out report. Full visibility into every action in the outreach and follow-up cadence.",
         } as Bi,
       },
     ],

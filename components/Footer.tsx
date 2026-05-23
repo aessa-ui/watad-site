@@ -160,13 +160,11 @@ export function Footer() {
                 <>
                   <li>المملكة العربية السعودية</li>
                   <li>منطقة الخليج العربي</li>
-                  <li>مصر</li>
                 </>
               ) : (
                 <>
                   <li>Saudi Arabia</li>
                   <li>Gulf Region</li>
-                  <li>Egypt</li>
                 </>
               )}
             </ul>
