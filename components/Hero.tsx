@@ -26,7 +26,7 @@ export function Hero() {
           <span className="mt-6 block md:mt-8">{h.headline2[lang]}</span>
         </h1>
 
-        <p className="mx-auto mt-s5 max-w-reading text-body-lg-m text-ink md:text-body-lg">
+        <p className="mx-auto mt-s5 max-w-reading text-body-lg-m text-ink/75 md:text-body-lg">
           {h.subhead[lang]}
         </p>
 
@@ -59,7 +59,7 @@ export function Hero() {
           ))}
         </div>
 
-        <p className="mt-s3 text-caption text-muted/60">{h.trust[lang]}</p>
+        <p className="mt-s3 text-caption text-muted/70">{h.trust[lang]}</p>
       </Container>
     </section>
   );

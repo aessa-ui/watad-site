@@ -55,7 +55,7 @@ export function Header() {
     <header
       className={[
         "fixed inset-x-0 top-0 z-50 transition-colors duration-200",
-        scrolled ? "border-b border-line bg-bone" : "border-b border-transparent bg-transparent",
+        scrolled ? "border-b border-line bg-bone shadow-sm" : "border-b border-transparent bg-transparent",
       ].join(" ")}
     >
       <div className="mx-auto flex h-16 max-w-container items-center justify-between px-6 md:px-10 lg:px-20">

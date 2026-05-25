@@ -36,15 +36,14 @@ export function Engagements() {
                 {card.title[lang]}
               </h3>
 
-              <div className="mt-s3 flex flex-1 flex-col gap-s2">
+              <div className="mt-s3 flex flex-1 flex-col">
                 {card.points.map((point, j) => (
                   <p
                     key={j}
-                    className={
-                      j === 0
-                        ? "text-body-m text-ink"
-                        : "text-body-m text-muted"
-                    }
+                    className={[
+                      "text-body-m leading-relaxed",
+                      j === 0 ? "text-ink pb-s2" : "text-muted border-t border-line/60 pt-s2 pb-s2",
+                    ].join(" ")}
                   >
                     {point[lang]}
                   </p>
@@ -53,9 +52,11 @@ export function Engagements() {
 
               <a
                 href="#closing"
-                className="mt-s4 inline-block text-body-m text-teal underline-offset-4 hover:underline"
+                className="mt-s4 inline-flex items-center gap-1 text-body-m text-teal underline-offset-4 hover:underline"
               >
-                {e.cardLink[lang]}
+                <span>{e.cardLink[lang]}</span>
+                <span aria-hidden="true" className="rtl:hidden">→</span>
+                <span aria-hidden="true" className="hidden rtl:inline">←</span>
               </a>
             </RevealItem>
           ))}
