@@ -15,6 +15,12 @@ import { config } from "./config";
 
 export type Lang = "ar" | "en";
 export type Bi = { ar: string; en: string };
+export type SectorCard = {
+  ar: string;
+  en: string;
+  subsegments: { ar: string[]; en: string[] };
+  fit: Bi;
+};
 
 export const content = {
   meta: {
@@ -31,25 +37,25 @@ export const content = {
   },
 
   hero: {
-    headline1: { ar: "تشغيل المتابعة التجارية.", en: "Commercial follow-up operations." } as Bi,
+    headline1: { ar: "نرتّب متابعة الفرص التجارية", en: "Commercial follow-up operations." } as Bi,
     headline2: {
       ar: "لشركات الخدمات في السعودية والخليج.",
       en: "For services firms in Saudi Arabia and the GCC.",
     } as Bi,
     subhead: {
-      ar: "نُشغّل تواصلاً ومتابعةً منظّمة تحرّك الفرص الجادة نحو لقاءات تجارية مؤهلة.",
-      en: "We operate structured outreach and follow-up that moves serious opportunities toward qualified commercial meetings.",
+      ar: "بعد أول اهتمام من العميل، تساعد وتد على تنظيم الخطوات التالية: من يتابع؟ متى؟ وبأي رسالة؟ حتى تتحرك الفرص الجادة نحو اجتماع واضح مع صاحب القرار.",
+      en: "After initial interest from a client, Watad helps organise the next steps: who follows up, when, and with what message — so serious opportunities move toward a clear meeting with the decision-maker.",
     } as Bi,
     cta: { ar: "احجز جلسة", en: "Book a conversation" } as Bi,
     ctaSecondary: { ar: "واتساب", en: "WhatsApp" } as Bi,
     trust: {
-      ar: `تشغيل المتابعة التجارية لشركات الخدمات. مقرها ${config.cityAr}.`,
+      ar: `نرتّب متابعة الفرص التجارية لشركات الخدمات. مقرها ${config.cityAr}.`,
       en: `Commercial follow-up operations for services firms. Headquartered in ${config.cityEn}.`,
     } as Bi,
     // Operating principles, not metrics — true descriptors of the model.
     proofChips: [
       { ar: "التزام تعاقدي", en: "Contractual commitment" } as Bi,
-      { ar: "حصرية القطاع", en: "Sector exclusivity" } as Bi,
+      { ar: "نطاق تعارض واضح", en: "Clear conflict boundaries" } as Bi,
       { ar: "تقارير تشغيلية", en: "Operational reporting" } as Bi,
     ],
   },
@@ -178,7 +184,7 @@ export const content = {
   footer: {
     brandName: "Watad",
     brandDescriptor: {
-      ar: "تشغيل المتابعة التجارية لشركات الخدمات.",
+      ar: "نرتّب متابعة الفرص التجارية لشركات الخدمات.",
       en: "Commercial follow-up operations for services firms.",
     } as Bi,
     brandRegions: { ar: "السعودية · الخليج.", en: "KSA · GCC." } as Bi,
@@ -199,23 +205,88 @@ export const content = {
   },
 
   trustedBy: {
-    overline: { ar: "القطاعات", en: "SECTORS WE SUPPORT" } as Bi,
-    h2: { ar: "القطاعات التي ندعمها", en: "Sectors we support" } as Bi,
-    // Operational category signals — the landscape Watad operates within.
-    // No client names, no logos. Pre-first-pilot: nothing implied as a client.
+    overline: { ar: "أين نعمل", en: "WHERE WATAD FITS" } as Bi,
+    h2: { ar: "أين يعمل نموذج وتد؟", en: "Where Watad fits" } as Bi,
+    // Six service-firm patterns Watad supports. Language-aware display —
+    // not bilingual inside cards. No client names, no logos, no metrics.
+    fitLabel: { ar: "كيف يعمل وتد", en: "How Watad fits" } as Bi,
     sectors: [
-      { ar: "البرامج الحكومية", en: "Government Programs" } as Bi,
-      { ar: "الفعاليات والأماكن", en: "Events & Venues" } as Bi,
-      { ar: "مجموعات الضيافة", en: "Hospitality Groups" } as Bi,
-      { ar: "الرياضة والترفيه", en: "Sports & Entertainment" } as Bi,
-      { ar: "شبكات التجزئة", en: "Retail Networks" } as Bi,
-      { ar: "المكاتب التنفيذية", en: "Executive Offices" } as Bi,
-      { ar: "العمليات متعددة المدن", en: "Multi-City Operations" } as Bi,
-      { ar: "الفرق التشغيلية", en: "Operational Teams" } as Bi,
-    ] as Bi[],
+      {
+        ar: "الفعاليات والوجهات",
+        en: "Events & Destinations",
+        subsegments: {
+          ar: ["شركات تنظيم الفعاليات", "إدارات الوجهات والمواقع", "شركات التجارب والتفعيل", "شركات إدارة الحشود وخدمات الزوار"],
+          en: ["event management companies", "destination & venue operators", "experience & activation companies", "crowd management & visitor services"],
+        },
+        fit: {
+          ar: "نساعد في ترتيب المتابعة مع العملاء والشركاء والرعاة حتى لا تضيع الفرص المتكررة.",
+          en: "We help structure follow-up with clients, partners, and sponsors so recurring opportunities are not lost.",
+        } as Bi,
+      },
+      {
+        ar: "الضيافة والمطاعم",
+        en: "Hospitality & F&B",
+        subsegments: {
+          ar: ["مجموعات المطاعم والمقاهي", "شركات الضيافة والفنادق", "شركات التموين والضيافة", "العلامات المحلية متعددة الفروع"],
+          en: ["restaurant & café groups", "hospitality & hotel companies", "catering & hospitality companies", "multi-branch local brands"],
+        },
+        fit: {
+          ar: "نرتّب المتابعة مع الحسابات المؤسسية والشراكات التجارية حتى لا تبقى الفرص بلا خطوة تالية.",
+          en: "We organise follow-up with corporate accounts and business partnerships so opportunities always have a next step.",
+        } as Bi,
+      },
+      {
+        ar: "المرافق والخدمات التشغيلية",
+        en: "Facilities & Operational Services",
+        subsegments: {
+          ar: ["شركات إدارة المرافق", "شركات التشغيل والصيانة", "شركات القوى العاملة وخدمات الإسناد", "شركات الخدمات الميدانية"],
+          en: ["facilities management companies", "operations & maintenance companies", "manpower & support services", "field services companies"],
+        },
+        fit: {
+          ar: "نوضّح من يتابع ومتى في كل فرصة تشغيلية، بدلاً من الاعتماد على الذاكرة أو الانشغال.",
+          en: "We clarify who follows up and when for each operational opportunity, removing reliance on memory or daily pressure.",
+        } as Bi,
+      },
+      {
+        ar: "اللوجستيات والعمليات الميدانية",
+        en: "Logistics & Field Operations",
+        subsegments: {
+          ar: ["شركات الخدمات اللوجستية", "شركات التوصيل", "فرق التركيب والتشغيل الميداني", "شركات الخدمات متعددة المدن"],
+          en: ["logistics service companies", "delivery companies", "installation & field operations teams", "multi-city service companies"],
+        },
+        fit: {
+          ar: "نرتّب حركة الفرص عبر حسابات موزّعة وفرق متعددة حتى لا تتوقف المتابعة.",
+          en: "We organise opportunity movement across distributed accounts and multiple teams so follow-up does not stall.",
+        } as Bi,
+      },
+      {
+        ar: "الرياضة والترفيه",
+        en: "Sports & Entertainment",
+        subsegments: {
+          ar: ["الأندية والبطولات", "شركات الترفيه والتجارب", "الجهات المنظمة للبرامج الموسمية", "فرق الشراكات والرعايات"],
+          en: ["clubs & tournaments", "entertainment & experience companies", "seasonal program organizers", "partnerships & sponsorship teams"],
+        },
+        fit: {
+          ar: "نساعد في ترتيب المتابعة مع الشركاء والرعاة وشركات الخدمات المشاركة في البرامج.",
+          en: "We help structure follow-up with partners, sponsors, and operational service providers.",
+        } as Bi,
+      },
+      {
+        ar: "شركات الخدمات المتخصصة",
+        en: "Specialized Service Companies",
+        subsegments: {
+          ar: ["شركات B2B المتخصصة", "فرق تجارية صغيرة", "شركات خدمات يقودها المؤسس", "فرق تطوير الأعمال الصغيرة"],
+          en: ["specialized B2B companies", "executive & commercial offices", "founder-led service companies", "small business development teams"],
+        },
+        fit: {
+          ar: "نرتّب حركة المتابعة حتى لا تعتمد الفرص التجارية على ذاكرة المؤسس أو جدول أعماله.",
+          en: "We organise follow-up movement so commercial opportunities do not depend on the founder's memory or schedule.",
+        } as Bi,
+      },
+    ] as SectorCard[],
     closing: {
-      ar: "القاسم المشترك: عمليات تجارية معقدة تستحق بنية تشغيلية منضبطة.",
-      en: "The common thread: complex commercial operations that warrant disciplined infrastructure.",
+      ar: "القاسم المشترك: شركات خدمات تستحق أن تكون متابعة فرصها منظّمة وواضحة.",
+      en: "The common thread: services firms whose commercial follow-up deserves to be organised and clear.",
     } as Bi,
   },
 
@@ -262,10 +333,10 @@ export const content = {
         } as Bi,
       },
       {
-        title: { ar: "حصرية القطاع", en: "Sector Exclusivity" } as Bi,
+        title: { ar: "نطاق تعارض واضح", en: "Clear conflict boundaries" } as Bi,
         body: {
-          ar: "لا نعمل مع شركتين متنافستين في نفس القطاع في آنٍ واحد. العميل النشط يملك حصرية قطاعه طوال مدة الباقة التجريبية.",
-          en: "We do not work with competing firms in the same sector simultaneously. The active client owns sector exclusivity for the duration of the engagement.",
+          ar: "نحدد حدود التعارض التجاري بحسب قائمة الحسابات، والقطاع الفرعي، والجغرافيا، أو النطاق المتفق عليه — لا بحجب صناعة كاملة.",
+          en: "We define commercial conflict boundaries by account list, sub-sector, geography, or agreed scope — not by blocking an entire broad industry.",
         } as Bi,
       },
       {

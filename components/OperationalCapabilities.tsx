@@ -48,7 +48,7 @@ export function OperationalCapabilities() {
               <h3 className="mt-s3 text-h3-m font-semibold text-ink md:text-h3">
                 {step.title[lang]}
               </h3>
-              <p className="mt-s2 text-body-m text-muted">{step.body[lang]}</p>
+              <p className="mt-s2 text-body-m leading-relaxed text-muted">{step.body[lang]}</p>
             </RevealItem>
           ))}
         </RevealGroup>

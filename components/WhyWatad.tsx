@@ -34,8 +34,8 @@ export function WhyWatad() {
                * Inner: logical border-s (inline-start) — correct in RTL
                * without directional class overrides. ps-s4 = padding-start.
                */}
-              <div className="group -mx-s2 cursor-default rounded-sm px-s2 py-s3 transition-colors duration-200 hover:bg-softbone/70">
-                <div className="border-s-2 border-teal ps-s4 transition-colors duration-200 group-hover:border-teal/60">
+              <div className="group -mx-s2 cursor-default rounded-sm px-s2 py-s4 transition-colors duration-200 hover:bg-softbone/70">
+                <div className="border-s-2 border-teal/50 ps-s4 transition-colors duration-200 group-hover:border-teal">
                   <h3 className="text-h3-m font-semibold text-ink transition-colors duration-200 group-hover:text-teal md:text-h3">
                     {item.title[lang]}
                   </h3>
