@@ -215,7 +215,7 @@ export const content = {
         ar: "الفعاليات والأماكن",
         en: "Events & Venues",
         subsegments: {
-          ar: ["مشغّلو الفعاليات", "مشغّلو الأماكن", "فرق التفعيل", "مزودو الخدمات التشغيلية للجمهور"],
+          ar: ["شركات تنظيم الفعاليات", "إدارات المواقع والوجهات", "فرق التفعيل والتجارب", "شركات خدمات الزوار والحشود"],
           en: ["event operators", "venue operators", "activation teams", "crowd & visitor operations providers"],
         },
         fit: {
@@ -227,7 +227,7 @@ export const content = {
         ar: "الضيافة والمطاعم",
         en: "Hospitality & F&B",
         subsegments: {
-          ar: ["مجموعات المطاعم", "فنادق البوتيك", "مشغّلو التقديم", "مفاهيم الضيافة"],
+          ar: ["مجموعات المطاعم", "فنادق البوتيك", "شركات التقديم", "مفاهيم الضيافة"],
           en: ["restaurant groups", "boutique hotels", "catering operators", "hospitality concepts"],
         },
         fit: {
@@ -239,7 +239,7 @@ export const content = {
         ar: "المرافق والقوى التشغيلية",
         en: "Facilities & Manpower",
         subsegments: {
-          ar: ["مشغّلو المرافق", "مزودو القوى العاملة", "شركات التشغيل والصيانة", "فرق الخدمات الخارجية"],
+          ar: ["شركات إدارة المرافق", "مزودو القوى العاملة", "شركات التشغيل والصيانة", "فرق الخدمات الخارجية"],
           en: ["facilities operators", "manpower providers", "O&M companies", "outsourced service teams"],
         },
         fit: {
@@ -251,7 +251,7 @@ export const content = {
         ar: "اللوجستيات والعمليات الميدانية",
         en: "Logistics & Field Operations",
         subsegments: {
-          ar: ["مشغّلو التوصيل الأخير", "شركات الخدمات الميدانية", "مشغّلون متعددو المدن", "فرق التسليم والتركيب"],
+          ar: ["شركات التوصيل الأخير", "شركات الخدمات الميدانية", "شركات العمليات متعددة المدن", "فرق التسليم والتركيب"],
           en: ["last-mile operators", "field service companies", "multi-city operators", "delivery & installation teams"],
         },
         fit: {
@@ -263,7 +263,7 @@ export const content = {
         ar: "الرياضة والترفيه",
         en: "Sports & Entertainment",
         subsegments: {
-          ar: ["الأندية", "البطولات", "مشغّلو الترفيه", "البرامج الموسمية"],
+          ar: ["الأندية", "البطولات", "شركات الترفيه والتجارب", "البرامج الموسمية"],
           en: ["clubs", "tournaments", "entertainment operators", "seasonal programs"],
         },
         fit: {
@@ -275,7 +275,7 @@ export const content = {
         ar: "الشركات بقيادة المؤسس",
         en: "Executive & Founder-led Services",
         subsegments: {
-          ar: ["شركات الخدمات بقيادة المؤسس", "المكاتب التنفيذية", "مشغّلو B2B المتخصصون", "مزودو خدمات متخصصة"],
+          ar: ["شركات الخدمات بقيادة المؤسس", "المكاتب التنفيذية", "شركات B2B المتخصصة", "مزودو خدمات متخصصة"],
           en: ["founder-led service firms", "executive offices", "high-touch B2B operators", "specialized service providers"],
         },
         fit: {
