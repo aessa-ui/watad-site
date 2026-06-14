@@ -25,10 +25,11 @@ export const config = {
   cityAr: "الرياض",
   cityEn: "Riyadh",
 
-  // Saudi Commercial Registration. Leave EMPTY until issued —
-  // the footer trust strip line hides itself entirely when blank
-  // (never renders a literal placeholder). Per spec S11 + S2 Footer.
-  crNumber: "",
+  // Verified legal relationship. Watad is a trade name operating UNDER the
+  // registered entity below — Watad is NOT itself a separately registered
+  // company. Do not imply otherwise. (CR confirmed in project CLAUDE.md.)
+  legalEntityAr: "شركة روابط التمكين التجارية",
+  crNumber: "1009035052",
 
   // Copyright year.
   year: 2026,

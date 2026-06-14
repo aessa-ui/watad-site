@@ -142,11 +142,6 @@ export function Footer() {
                   {f.terms[lang]}
                 </a>
               </li>
-              {showTrustStrip && (
-                <li className="text-muted">
-                  {f.crLabel[lang]} {config.crNumber}
-                </li>
-              )}
             </ul>
           </div>
 
@@ -176,7 +171,7 @@ export function Footer() {
 
         {/* Conditional trust strip */}
         {showTrustStrip && (
-          <p className="border-t border-line pt-s4 pb-s2 text-caption text-muted">
+          <p className="whitespace-pre-line border-t border-line pt-s4 pb-s2 text-caption text-muted">
             {f.trustStrip[lang]}
           </p>
         )}

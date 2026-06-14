@@ -126,6 +126,29 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+// Structured data (G2) — verified facts only. No tax id, no street address
+// beyond city/country, no founder Person, public email only, KSA + GCC scope.
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Watad",
+  legalName: config.legalEntityAr, // شركة روابط التمكين التجارية (Watad operates under it)
+  description: content.meta.descriptionEn,
+  url: config.siteUrl,
+  email: config.email, // hello@watadops.com — public contact
+  areaServed: ["SA", "AE", "QA", "KW", "BH", "OM"], // Saudi Arabia + GCC only
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: config.cityEn,
+    addressCountry: "SA",
+  },
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "Saudi Commercial Registration (CR)",
+    value: config.crNumber,
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -139,6 +162,10 @@ export default function RootLayout({
     >
       {/* next/font self-hosts the font files — no external preconnect needed. */}
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

@@ -194,9 +194,11 @@ export const content = {
     terms: { ar: "الشروط والأحكام", en: "Terms" } as Bi,
     crLabel: { ar: "السجل التجاري", en: "Commercial Registration" } as Bi,
     // Trust strip: renders only when config.crNumber is set.
+    // Verified legal relationship — Watad operates UNDER the registered entity;
+    // it is NOT a separately registered company. Approved phrasing (founder, 2026-06-14).
     trustStrip: {
-      ar: `مرخّصة من وزارة التجارة · س.ت. ${config.crNumber} · مقرها ${config.cityAr}، المملكة العربية السعودية`,
-      en: `Licensed by the Ministry of Commerce · CR ${config.crNumber} · Headquartered in ${config.cityEn}, Saudi Arabia`,
+      ar: `وتد تعمل تحت ${config.legalEntityAr}\nالسجل التجاري: ${config.crNumber}\n${config.cityAr}، المملكة العربية السعودية`,
+      en: `Watad operates under ${config.legalEntityAr} · Commercial Registration ${config.crNumber} · ${config.cityEn}, Saudi Arabia`,
     } as Bi,
     copyright: {
       ar: `© ${config.year} Watad. كل الحقوق محفوظة.`,
