@@ -10,7 +10,7 @@
  */
 
 export const config = {
-  calendlyUrl: "https://calendly.com/a-essa-watadops/30min",
+  calendlyUrl: "https://calendly.com/a-essa-watadops/watad-15-minute-introductory-call",
 
   whatsappNumber: "966599998815",
 
