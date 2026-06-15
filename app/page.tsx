@@ -21,6 +21,7 @@ import { Hero } from "@/components/Hero";
 import { TrustedBy } from "@/components/TrustedBy";
 import { Services } from "@/components/Services";
 import { OperationalCapabilities } from "@/components/OperationalCapabilities";
+import { ProofLayer } from "@/components/ProofLayer";
 import { WhyWatad } from "@/components/WhyWatad";
 import { Engagements } from "@/components/Engagements";
 import { ClosingCTA } from "@/components/ClosingCTA";
@@ -46,6 +47,7 @@ export default function Home() {
         <TrustedBy />
         <Services />
         <OperationalCapabilities />
+        <ProofLayer />
         <WhyWatad />
         <Engagements />
         <ClosingCTA />

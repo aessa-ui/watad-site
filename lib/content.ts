@@ -351,6 +351,73 @@ export const content = {
     ],
   },
 
+  proof: {
+    overline: { ar: "نماذج العمل", en: "HOW WE OPERATE" } as Bi,
+    heading: { ar: "شكل ما نسلّمه", en: "The structure of our work" } as Bi,
+    integrity: {
+      ar: "لا ننشر أسماء عملاء ولا أرقامًا مفترضة. نعرض بنية العمل — نماذج لما نسلّمه.",
+      en: "We don't publish client names or invented numbers. We show how the work is structured — samples of what we deliver.",
+    } as Bi,
+    sampleTag: { ar: "نموذج بنية", en: "Sample Structure" } as Bi,
+    decisionLabel: { ar: "القرار", en: "DECISION" } as Bi,
+    decisionStates: [
+      { ar: "أرسل الآن", en: "SEND NOW" },
+      { ar: "أمسك", en: "HOLD" },
+      { ar: "تحقّق", en: "VERIFY" },
+      { ar: "أجّل", en: "DEFER" },
+    ] as Bi[],
+    artifacts: [
+      {
+        key: "account-intelligence",
+        title: { ar: "تقرير ذكاء الحساب", en: "Account Intelligence Report" } as Bi,
+        caption: { ar: "قرار واضح قبل أي تواصل.", en: "A clear decision before any outreach." } as Bi,
+        rows: [
+          { ar: "الملخص التنفيذي", en: "Executive Summary" },
+          { ar: "ذكاء الشركة", en: "Company Intelligence" },
+          { ar: "صنّاع القرار", en: "Decision-Makers" },
+          { ar: "الإشارات التجارية", en: "Commercial Signals" },
+          { ar: "حالة التحقّق", en: "Verification Status" },
+        ] as Bi[],
+      },
+      {
+        key: "weekly-review",
+        title: { ar: "المراجعة التشغيلية الأسبوعية", en: "Weekly Operating Review" } as Bi,
+        caption: { ar: "رؤية تنفيذية كل أسبوع.", en: "Executive visibility every week." } as Bi,
+        rows: [
+          { ar: "الحالة العامة", en: "Overall Status" },
+          { ar: "إجراءات مطلوبة من الإدارة", en: "CEO Actions Required" },
+          { ar: "الفرص", en: "Opportunities" },
+          { ar: "المخاطر", en: "Risks" },
+        ] as Bi[],
+      },
+      {
+        key: "day30",
+        title: { ar: "تقرير اليوم الثلاثين", en: "Day-30 Close-Out" } as Bi,
+        caption: { ar: "ما بنيناه، وما تعلّمناه، وما تملكونه.", en: "What we built, learned, and what you own." } as Bi,
+        rows: [
+          { ar: "حسابات مُتحقّقة", en: "Verified Accounts" },
+          { ar: "صنّاع قرار محدَّدون", en: "Decision-Makers Identified" },
+          { ar: "فرص مؤهلة", en: "Qualified Opportunities" },
+          { ar: "إشارات مكتشفة", en: "Signals Discovered" },
+          { ar: "مخاطر مُستبعدة", en: "Risks Eliminated" },
+          { ar: "خط فرص مبني", en: "Pipeline Created" },
+        ] as Bi[],
+      },
+    ],
+    humanLed: {
+      ar: "كل رسالة يراجعها ويرسلها شخص.",
+      en: "Every message is reviewed and sent by a person.",
+    } as Bi,
+    verification: {
+      ar: "كل ارتباط محكوم باتفاقية مكتوبة، ونتحقق من كل جهة تواصل قبل أي مراسلة.",
+      en: "Every engagement is contract-governed, and every contact is verified before any outreach.",
+    } as Bi,
+    confidentiality: {
+      ar: "بيانات العملاء لا تُعرض علنًا أبدًا. كل لقطة هنا نموذج بنية.",
+      en: "Client data is never shown publicly. Every preview here is a sample structure.",
+    } as Bi,
+  },
+
   privacyPage: {
     title: { ar: "سياسة الخصوصية", en: "Privacy Policy" } as Bi,
     body: [
