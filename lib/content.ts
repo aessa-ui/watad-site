@@ -64,8 +64,8 @@ export const content = {
     overline: { ar: "منهجية العمل", en: "METHODOLOGY" } as Bi,
     h2: { ar: "منهجية العمل", en: "How we work" } as Bi,
     intro: {
-      ar: "أربع خطوات تشغيلية. كل خطوة موثّقة، وكل عميل يرى نتائجها بشكل يومي.",
-      en: "Four operational steps. Every step documented. Every client sees the result daily.",
+      ar: "أربع خطوات تشغيلية. كل خطوة موثّقة، وكل عميل يرى نتائجها في تقرير أسبوعي واضح.",
+      en: "Four operational steps. Every step documented. Every client sees the result in a clear weekly report.",
     } as Bi,
     steps: [
       {
@@ -73,8 +73,8 @@ export const content = {
         numEn: "1",
         title: { ar: "التحديد", en: "Identify" } as Bi,
         body: {
-          ar: "نبني قائمة بـ 200 شركة تطابق شريحتكم المستهدفة، مع تحديد أسماء صنّاع القرار في كل شركة وإشارات الشراء الحالية لديهم.",
-          en: "We build a list of 200 firms matching your target segment, with named decision-makers and current buying signals.",
+          ar: "نبني قائمة مركّزة بالشركات التي تطابق شريحتكم المستهدفة، مع تحديد أسماء صنّاع القرار في كل شركة وإشارات الشراء الحالية لديهم.",
+          en: "We build a targeted list of firms matching your target segment, with named decision-makers and current buying signals.",
         } as Bi,
       },
       {
