@@ -45,11 +45,11 @@ export default function Home() {
 
       <main id="content">
         <Hero />
-        <TrustedBy />
         <Services />
         <OperationalCapabilities />
-        <ProofLayer />
+        <TrustedBy />
         <WhyWatad />
+        <ProofLayer />
         <Engagements />
         <FAQ />
         <ClosingCTA />

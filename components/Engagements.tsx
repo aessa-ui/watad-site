@@ -32,6 +32,11 @@ export function Engagements() {
               key={i}
               className="flex flex-col border border-line bg-bone p-s4 md:p-s5"
             >
+              {i === 0 && (
+                <span className="mb-s3 self-start rounded-full bg-teal px-s2 py-[2px] text-caption font-medium text-bone">
+                  {lang === "ar" ? "ابدأ من هنا" : "Start here"}
+                </span>
+              )}
               <h3 className="text-h3-m font-semibold text-ink md:text-h3">
                 {card.title[lang]}
               </h3>
