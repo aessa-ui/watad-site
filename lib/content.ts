@@ -418,6 +418,33 @@ export const content = {
     } as Bi,
   },
 
+  faq: {
+    overline: { ar: "أسئلة متكررة", en: "FAQ" } as Bi,
+    h2: { ar: "أسئلة شائعة", en: "Common questions" } as Bi,
+    items: [
+      {
+        q: { ar: "هل يناسب وتد شركتنا من حيث الحجم؟", en: "Is Watad right for our firm size?" } as Bi,
+        a: { ar: "نعمل مع شركات خدمات متفاوتة الحجم — من الشركات الصغيرة التي يقودها المؤسس إلى المجموعات ذات الفروع المتعددة. المعيار ليس الحجم، بل وجود فرص تجارية تستحق متابعة منظّمة.", en: "We work with services firms of varying sizes — from founder-led companies to multi-branch groups. The criterion is not size, but having commercial opportunities that deserve organised follow-up." } as Bi,
+      },
+      {
+        q: { ar: "ما الفرق بين وتد وتوظيف متخصص تطوير أعمال؟", en: "How is Watad different from a BD hire?" } as Bi,
+        a: { ar: "التوظيف يستغرق وقتاً للمقابلات والتأهيل، ومخرجاته مرتبطة بأداء فرد واحد. وتد تشغيل منظّم يبدأ بعد الاتفاقية مباشرة، مع تقارير أسبوعية واضحة وإيقاع موثّق.", en: "Hiring takes time for interviews and onboarding, and output depends on one person's performance. Watad is structured operations that begin shortly after agreement, with clear weekly reporting and a documented cadence." } as Bi,
+      },
+      {
+        q: { ar: "ما الذي يُطلب منّي خلال فترة التعاقد؟", en: "What is required from me during the engagement?" } as Bi,
+        a: { ar: "جلسة استكشاف قبل البدء لضبط المعايير والنطاق، ومراجعة أسبوعية قصيرة لمتابعة التقرير، وجلسة ختامية في اليوم الثلاثين. لا يُطلب منك تشغيل يومي ولا متابعة مستمرة.", en: "A discovery session before we start to set criteria and scope, a short weekly review to go through the report, and a close-out session on Day 30. No daily operations or continuous follow-up is required from you." } as Bi,
+      },
+      {
+        q: { ar: "كيف تُحافظون على سرية بيانات شركتنا؟", en: "How do you protect our firm's data confidentiality?" } as Bi,
+        a: { ar: "كل ارتباط محكوم باتفاقية سرية مكتوبة. بيانات الحسابات والتواصل تُستخدم حصراً في نطاق عملكم ولا تُشارك مع أي طرف آخر.", en: "Every engagement is governed by a written confidentiality agreement. Account and outreach data is used exclusively within your scope and is never shared with any third party." } as Bi,
+      },
+      {
+        q: { ar: "هل هناك ضمان على عدد اللقاءات؟", en: "Is there a meeting guarantee?" } as Bi,
+        a: { ar: "لا. وتد لا تعمل بنموذج الضمان أو العمولة. ما نلتزم به هو الانضباط التشغيلي: كل خطوة موثّقة، وكل تواصل مبني على بحث، وكل نتيجة مرئية في التقرير الأسبوعي.", en: "No. Watad does not operate on a guarantee or commission model. What we commit to is operational discipline: every step documented, every outreach research-based, and every result visible in the weekly report." } as Bi,
+      },
+    ],
+  },
+
   privacyPage: {
     title: { ar: "سياسة الخصوصية", en: "Privacy Policy" } as Bi,
     body: [

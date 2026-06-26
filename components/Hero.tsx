@@ -10,6 +10,7 @@ import { useLang } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { config, whatsappUrl } from "@/lib/config";
 import { Container, PrimaryCTA } from "./ui";
+import { WhatsappIcon } from "./WhatsappIcon";
 
 export function Hero() {
   const { lang } = useLang();
@@ -41,8 +42,9 @@ export function Hero() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-button font-medium text-muted underline-offset-4 hover:text-ink hover:underline"
+            className="inline-flex items-center gap-2 rounded-full border border-line px-s4 py-[10px] text-button font-medium text-ink transition-all duration-150 hover:border-teal hover:text-teal"
           >
+            <WhatsappIcon />
             {h.ctaSecondary[lang]}
           </a>
         </div>

@@ -13,6 +13,13 @@ import { content } from "@/lib/content";
 import { config } from "@/lib/config";
 import { Wordmark, OutlinePill } from "./ui";
 
+const navLinks = [
+  { ar: "ما نقدّمه", en: "Services", href: "#services" },
+  { ar: "كيف نعمل", en: "How we work", href: "#capabilities" },
+  { ar: "لماذا وتد", en: "Why Watad", href: "#why-watad" },
+  { ar: "أسئلة", en: "FAQ", href: "#faq" },
+] as const;
+
 function LangToggle() {
   const { lang, setLang } = useLang();
   return (
@@ -63,10 +70,23 @@ export function Header() {
           <Wordmark variant="ink" className="h-7 w-auto md:h-8" />
         </a>
 
-        <div className="flex items-center gap-s4">
-          <div className="hidden md:block">
-            <LangToggle />
-          </div>
+        <nav
+          className="hidden items-center gap-s5 md:flex"
+          aria-label={lang === "ar" ? "القائمة الرئيسية" : "Main navigation"}
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-caption text-muted transition-colors duration-150 hover:text-ink"
+            >
+              {link[lang]}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-s3">
+          <LangToggle />
           <OutlinePill
             label={content.nav.cta[lang]}
             href={config.calendlyUrl}

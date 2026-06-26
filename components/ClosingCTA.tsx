@@ -12,6 +12,7 @@ import { content } from "@/lib/content";
 import { config, whatsappUrl } from "@/lib/config";
 import { Container, Section, PrimaryCTA } from "./ui";
 import { Reveal } from "./Reveal";
+import { WhatsappIcon } from "./WhatsappIcon";
 
 export function ClosingCTA() {
   const { lang } = useLang();
@@ -39,8 +40,9 @@ export function ClosingCTA() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-button font-medium text-bone/70 underline-offset-4 hover:text-bone hover:underline"
+                className="inline-flex items-center gap-2 text-button font-medium text-bone/70 transition-colors duration-150 hover:text-bone"
               >
+                <WhatsappIcon />
                 {c.ctaSecondary[lang]}
               </a>
             </div>

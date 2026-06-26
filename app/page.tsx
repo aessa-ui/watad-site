@@ -25,6 +25,7 @@ import { ProofLayer } from "@/components/ProofLayer";
 import { WhyWatad } from "@/components/WhyWatad";
 import { Engagements } from "@/components/Engagements";
 import { ClosingCTA } from "@/components/ClosingCTA";
+import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
 
@@ -50,6 +51,7 @@ export default function Home() {
         <ProofLayer />
         <WhyWatad />
         <Engagements />
+        <FAQ />
         <ClosingCTA />
       </main>
 
