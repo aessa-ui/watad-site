@@ -22,7 +22,7 @@ function WhatsappGlyph() {
       height="22"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#1d1d1f"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -73,6 +73,7 @@ export function MobileStickyBar() {
           href={config.calendlyUrl}
           target="_blank"
           rel="noopener noreferrer"
+          tabIndex={visible ? undefined : -1}
           className="text-button font-medium text-ink"
         >
           {content.nav.cta[lang]}
@@ -81,6 +82,7 @@ export function MobileStickyBar() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          tabIndex={visible ? undefined : -1}
           aria-label="WhatsApp"
           className="flex items-center"
         >

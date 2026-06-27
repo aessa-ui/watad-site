@@ -64,7 +64,7 @@ export function Footer() {
         <div className="flex flex-col gap-s5 pb-s6 pt-s7 md:flex-row md:items-end md:justify-between">
           <div>
             <Wordmark variant="ink" className="h-8 w-auto md:h-9" />
-            <p className="mt-s3 max-w-[340px] text-body-m text-ink">
+            <p className="mt-s3 max-w-blurb text-body-m text-ink">
               {f.brandDescriptor[lang]}
             </p>
             <p className="text-body-m text-muted">{f.brandRegions[lang]}</p>

@@ -26,6 +26,7 @@ const config: Config = {
         container: "1120px",
         reading: "680px",
         band: "720px",
+        blurb: "340px",
       },
       spacing: {
         // Brand spacing tokens (WATAD_BRAND_SYSTEM.md S8)
