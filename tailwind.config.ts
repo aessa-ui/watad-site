@@ -84,12 +84,12 @@ const config: Config = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: { gridTemplateRows: "0fr" },
+          to: { gridTemplateRows: "1fr" },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: { gridTemplateRows: "1fr" },
+          to: { gridTemplateRows: "0fr" },
         },
       },
       animation: {

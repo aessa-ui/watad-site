@@ -42,7 +42,7 @@ export function Hero() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-line px-s4 py-[10px] text-button font-medium text-ink transition-all duration-150 hover:border-teal hover:text-teal"
+            className="inline-flex items-center gap-2 rounded-full border border-line px-s4 py-[10px] text-button font-medium text-ink transition-[border-color,color] duration-150 hover:border-teal hover:text-teal"
           >
             <WhatsappIcon />
             {h.ctaSecondary[lang]}

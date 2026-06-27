@@ -5,6 +5,7 @@
 :root {
   --watad-ink: #1d1d1f;
   --watad-bone: #faf9f5;
+  --watad-softbone: #f2f0ea;
   --watad-teal: #1f4747;
   --watad-gold: #a48652;
 }
@@ -64,7 +65,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-color: #1d1d1f;
+    background-color: var(--watad-ink);
     opacity: 0;
     transition: opacity 150ms ease;
     pointer-events: none;
@@ -96,7 +97,7 @@
     transition: background-color 200ms cubic-bezier(0.22, 1, 0.36, 1);
   }
   .card-hover:hover {
-    background-color: #f2f0ea; /* softbone — one tone quieter */
+    background-color: var(--watad-softbone);
   }
 
   /* ── Section link — teal underline hover ─────────────────────── */
@@ -121,7 +122,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 50;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 160px 160px;

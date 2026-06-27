@@ -35,10 +35,12 @@ export function FAQ() {
                     />
                   </Accordion.Trigger>
                 </Accordion.Header>
-                <Accordion.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                  <p className="pb-s4 text-body-m leading-relaxed text-muted">
-                    {item.a[lang]}
-                  </p>
+                <Accordion.Content className="grid overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+                  <div className="overflow-hidden">
+                    <p className="pb-s4 text-body-m leading-relaxed text-muted">
+                      {item.a[lang]}
+                    </p>
+                  </div>
                 </Accordion.Content>
               </Accordion.Item>
             ))}

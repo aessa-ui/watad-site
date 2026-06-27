@@ -36,7 +36,7 @@ export default function Home() {
     <>
       <a
         href="#content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-ink focus:px-s3 focus:py-s2 focus:text-bone"
+        className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-ink focus:px-s3 focus:py-s2 focus:text-bone"
       >
         {content.nav.skipToContent[lang]}
       </a>

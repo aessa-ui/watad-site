@@ -14,6 +14,7 @@
  * Mobile: stacks cleanly, lang toggle shown in copyright bar.
  */
 
+import Link from "next/link";
 import { useLang } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { config, whatsappUrl, mailtoUrl } from "@/lib/config";
@@ -28,7 +29,7 @@ function FooterLangToggle() {
         onClick={() => setLang("ar")}
         className={[
           "transition-colors duration-150",
-          lang === "ar" ? "text-ink" : "text-muted opacity-40 hover:opacity-70",
+          lang === "ar" ? "text-ink" : "text-muted opacity-60 hover:opacity-80",
         ].join(" ")}
         aria-pressed={lang === "ar"}
       >
@@ -40,7 +41,7 @@ function FooterLangToggle() {
         onClick={() => setLang("en")}
         className={[
           "transition-colors duration-150",
-          lang === "en" ? "text-ink" : "text-muted opacity-40 hover:opacity-70",
+          lang === "en" ? "text-ink" : "text-muted opacity-60 hover:opacity-80",
         ].join(" ")}
         aria-pressed={lang === "en"}
       >
@@ -127,20 +128,20 @@ export function Footer() {
             </p>
             <ul className="mt-s3 space-y-s2 text-body-m" role="list">
               <li>
-                <a
+                <Link
                   href="/privacy"
                   className="text-ink underline-offset-4 transition-colors duration-150 hover:text-teal hover:underline"
                 >
                   {f.privacy[lang]}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/terms"
                   className="text-ink underline-offset-4 transition-colors duration-150 hover:text-teal hover:underline"
                 >
                   {f.terms[lang]}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -36,7 +36,7 @@ export function OperationalCapabilities() {
             <RevealItem key={i} className="flex flex-col">
               {/* Step number — large, de-emphasised */}
               <span
-                className="select-none text-[72px] font-light leading-none tracking-tighter text-teal/15"
+                className="select-none text-display font-light leading-none tracking-tighter text-teal/15"
                 aria-hidden="true"
               >
                 {lang === "ar" ? step.numAr : step.numEn}

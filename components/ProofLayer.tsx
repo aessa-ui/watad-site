@@ -54,8 +54,8 @@ export function ProofLayer() {
         {/* Trust reinforcement — human-led, verification, confidentiality */}
         <Reveal>
           <div className="mt-s6 max-w-reading space-y-s2">
-            <p className="text-body-m text-ink/80">{p.humanLed[lang]}</p>
-            <p className="text-body-m text-ink/80">{p.verification[lang]}</p>
+            <p className="text-body-m text-ink/80 md:text-body">{p.humanLed[lang]}</p>
+            <p className="text-body-m text-ink/80 md:text-body">{p.verification[lang]}</p>
             <p className="text-caption text-muted">{p.confidentiality[lang]}</p>
           </div>
         </Reveal>
